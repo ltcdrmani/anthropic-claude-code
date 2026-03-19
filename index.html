@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Johnson — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">AJ</a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <span class="hero__greeting">Hi, I'm</span>
+      <h1 class="hero__name">Alex Johnson</h1>
+      <p class="hero__tagline">Full-Stack Developer &amp; UI Enthusiast</p>
+      <p class="hero__description">
+        I build clean, performant web experiences that people love to use.
+        Currently open to new opportunities.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__blob" aria-hidden="true"></div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section__title">About Me</h2>
+      <div class="about__grid">
+        <div class="about__avatar">
+          <div class="avatar-placeholder">AJ</div>
+        </div>
+        <div class="about__text">
+          <p>
+            I'm a passionate developer with 3+ years of experience crafting
+            digital products. I thrive at the intersection of design and
+            engineering — writing code that's both elegant and effective.
+          </p>
+          <p>
+            When I'm not coding, you'll find me hiking trails, experimenting
+            with photography, or diving into a good book. I believe the best
+            software is built by well-rounded people.
+          </p>
+          <a href="#" class="btn btn--primary" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__subtitle">A few things I've built recently</p>
+      <div class="projects__grid">
+
+        <article class="card">
+          <div class="card__img card__img--1"></div>
+          <div class="card__body">
+            <h3 class="card__title">TaskFlow</h3>
+            <p class="card__desc">A drag-and-drop project management app with real-time collaboration built with React and Firebase.</p>
+            <div class="card__tags">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">TypeScript</span>
+            </div>
+            <div class="card__links">
+              <a href="#" class="card__link">Live Demo →</a>
+              <a href="#" class="card__link">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img card__img--2"></div>
+          <div class="card__body">
+            <h3 class="card__title">WeatherNow</h3>
+            <p class="card__desc">A beautiful weather dashboard that visualizes 7-day forecasts using animated charts and geolocation.</p>
+            <div class="card__tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Chart.js</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="card__links">
+              <a href="#" class="card__link">Live Demo →</a>
+              <a href="#" class="card__link">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img card__img--3"></div>
+          <div class="card__body">
+            <h3 class="card__title">ShopLite</h3>
+            <p class="card__desc">A lightweight e-commerce storefront with cart, checkout, and Stripe integration. Blazing-fast performance.</p>
+            <div class="card__tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">Tailwind</span>
+            </div>
+            <div class="card__links">
+              <a href="#" class="card__link">Live Demo →</a>
+              <a href="#" class="card__link">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section__title">Skills</h2>
+      <p class="section__subtitle">Technologies I work with</p>
+      <div class="skills__grid">
+        <div class="skill-group">
+          <h3 class="skill-group__title">Frontend</h3>
+          <ul class="skill-list">
+            <li>HTML / CSS / JavaScript</li>
+            <li>React &amp; Next.js</li>
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Backend</h3>
+          <ul class="skill-list">
+            <li>Node.js &amp; Express</li>
+            <li>Python &amp; FastAPI</li>
+            <li>PostgreSQL &amp; MongoDB</li>
+            <li>REST &amp; GraphQL APIs</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Tools &amp; Other</h3>
+          <ul class="skill-list">
+            <li>Git &amp; GitHub</li>
+            <li>Docker &amp; CI/CD</li>
+            <li>AWS &amp; Vercel</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section__title">Get In Touch</h2>
+      <p class="section__subtitle">Have a project in mind? I'd love to hear from you.</p>
+      <div class="contact__wrapper">
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        </form>
+        <div class="contact__links">
+          <p>Or find me on</p>
+          <a href="#" class="social-link">GitHub</a>
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="mailto:alex@example.com" class="social-link">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Designed &amp; built by Alex Johnson &mdash; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
