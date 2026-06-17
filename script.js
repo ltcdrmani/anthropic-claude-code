@@ -11,8 +11,52 @@ burger.addEventListener('click', () => {
 });
 
 links.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => links.classList.remove('open'));
+  a.addEventListener('click', () => {
+    links.classList.remove('open');
+    document.querySelectorAll('.nav__dropdown-menu').forEach(m => m.classList.remove('open'));
+    document.querySelectorAll('.nav__dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  });
 });
+
+/* DROPDOWN */
+document.querySelectorAll('.nav__dropdown-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const menu = btn.nextElementSibling;
+    const isOpen = menu.classList.contains('open');
+    document.querySelectorAll('.nav__dropdown-menu').forEach(m => m.classList.remove('open'));
+    document.querySelectorAll('.nav__dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav__dropdown-menu').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.nav__dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+});
+
+/* ACTIVE SECTION HIGHLIGHT */
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav__links a[href^="#"], .nav__dropdown-menu a[href^="#"]');
+const dropdownBtn = document.querySelector('.nav__dropdown-btn');
+const dayIds = ['day1','day2','day3','day4','day5','day6','day7','day8'];
+
+function highlightNav() {
+  let current = '';
+  sections.forEach(sec => {
+    if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+  });
+  navAnchors.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+  if (dropdownBtn) {
+    dropdownBtn.classList.toggle('active', dayIds.includes(current));
+  }
+}
+window.addEventListener('scroll', highlightNav);
+highlightNav();
 
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
