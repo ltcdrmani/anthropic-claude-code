@@ -408,6 +408,27 @@ ul, ol { padding-left: 1.25rem; }
 .meta-tag--hotel { background: #f4ecf7; color: #7d3c98; border: 1px solid #e8daef; }
 .meta-tag--info { background: #fef9e7; color: #b7791f; border: 1px solid #fdebd0; }
 
+/* MAP LINKS */
+.map-link {
+  color: var(--primary-light);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+.map-link:hover {
+  color: var(--accent);
+  text-decoration-style: solid;
+}
+.map-link::after {
+  content: ' \01F4CD';
+  font-size: 0.75em;
+}
+h3 .map-link { color: inherit; }
+h3 .map-link:hover { color: var(--accent); }
+strong .map-link { color: inherit; font-weight: inherit; }
+strong .map-link:hover { color: var(--accent); }
+
 /* MEAL BOX */
 .meal-box {
   background: var(--bg);
