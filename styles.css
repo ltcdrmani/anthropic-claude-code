@@ -624,6 +624,170 @@ strong .map-link:hover { color: var(--accent); }
   opacity: 0.5;
 }
 
+/* CHECKLIST */
+.checklist-section { background: var(--bg); }
+.checklist__progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.checklist__progress-bar {
+  flex: 1;
+  height: 10px;
+  background: var(--border-light);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.checklist__progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), #2ecc71);
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+.checklist__progress-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.checklist__controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.btn--small {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.btn--outline:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+  background: var(--blue-light);
+}
+.checklist__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+.checklist-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.checklist-card__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  transition: background var(--transition);
+}
+.checklist-card__header:hover { background: var(--blue-light); }
+.checklist-card__header h3 {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.checklist-card__icon { font-size: 1.2rem; }
+.checklist-card__count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--border-light);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+}
+.checklist-card__count.done {
+  background: var(--green-light);
+  color: var(--green);
+}
+.checklist-card__arrow {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: transform var(--transition);
+}
+.checklist-card__header[aria-expanded="false"] .checklist-card__arrow {
+  transform: rotate(-90deg);
+}
+.checklist-card__list {
+  list-style: none;
+  padding: 0;
+  max-height: 600px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.checklist-card__list.collapsed {
+  max-height: 0;
+}
+.checklist-card__list li {
+  border-bottom: 1px solid var(--border-light);
+}
+.checklist-card__list li:last-child { border-bottom: none; }
+.checklist-card__list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.7rem 1.25rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.checklist-card__list label:hover { background: #f8f9fa; }
+.checklist-card__list input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin-top: 1px;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition);
+}
+.checklist-card__list input[type="checkbox"]:checked {
+  background: var(--green);
+  border-color: var(--green);
+}
+.checklist-card__list input[type="checkbox"]:checked::after {
+  content: '\2713';
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.checklist-card__list span {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.5;
+  transition: all var(--transition);
+}
+.checklist-card__list input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
 /* SCROLL REVEAL */
 .reveal {
   opacity: 0;
@@ -670,6 +834,7 @@ strong .map-link:hover { color: var(--accent); }
   .valid-stat__number { font-size: 1.6rem; }
 
   .overview__grid { grid-template-columns: repeat(2, 1fr); }
+  .checklist__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

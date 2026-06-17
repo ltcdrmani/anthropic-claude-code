@@ -24,6 +24,7 @@
         <li><a href="#day6">Day 6</a></li>
         <li><a href="#day7">Day 7</a></li>
         <li><a href="#day8">Day 8</a></li>
+        <li><a href="#checklist">Checklist</a></li>
         <li><a href="#validation">Validation</a></li>
       </ul>
       <button class="nav__burger" id="burger" aria-label="Toggle menu">
@@ -715,6 +716,128 @@
           <li><strong>Lunch:</strong> Picnic at Olmstead Place State Park. Kids enjoy Ellensburg takeout (<s>Yellow Church Cafe is permanently closed</s> &mdash; try <a href="https://www.google.com/maps/search/?api=1&query=La+Santa+Mexican+Cuisine+Ellensburg+WA" class="map-link" target="_blank" rel="noopener">La Santa Mexican Cuisine</a> or other downtown options) or packed lunchboxes; adults eat clean.</li>
           <li><strong>Homeward Snacks:</strong> Fresh sweet cherries from Prosser fruit stands.</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIP CHECKLIST -->
+  <section class="section checklist-section" id="checklist">
+    <div class="container">
+      <h2 class="section__title">Trip Checklist</h2>
+      <p class="section__subtitle">Tap items to check them off &mdash; progress saves automatically in your browser</p>
+
+      <div class="checklist__progress">
+        <div class="checklist__progress-bar">
+          <div class="checklist__progress-fill" id="progressFill"></div>
+        </div>
+        <span class="checklist__progress-text" id="progressText">0 / 0 complete</span>
+      </div>
+
+      <div class="checklist__controls">
+        <button class="btn btn--small btn--outline" id="uncheckAll">Uncheck All</button>
+        <button class="btn btn--small btn--outline" id="collapseAll">Collapse All</button>
+      </div>
+
+      <div class="checklist__grid">
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128196;</span>
+            <h3>Documents &amp; Reservations</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="docs">
+            <li><label><input type="checkbox" data-key="docs-0"><span>Driver&rsquo;s license / photo IDs</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-1"><span>Health insurance cards</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-2"><span>Vehicle registration &amp; insurance</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-3"><span>Hotel confirmation printouts / screenshots</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-4"><span>National Park passes (America the Beautiful)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-5"><span>Emergency contacts list</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-6"><span>Roadside assistance / AAA info</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-7"><span>Printed itinerary (backup for no-signal areas)</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127890;</span>
+            <h3>Packing Essentials</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="pack">
+            <li><label><input type="checkbox" data-key="pack-0"><span>Layers &amp; warm jackets (Yellowstone mornings ~40&deg;F)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-1"><span>Rain jackets / ponchos</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-2"><span>Hiking shoes &amp; sandals</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-3"><span>Sunscreen SPF 50+ &amp; sunglasses</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-4"><span>Hats (sun &amp; warm)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-5"><span>Swimsuits &amp; towels (String Lake, hotel pools)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-6"><span>Bug spray / insect repellent</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-7"><span>Toiletries &amp; medications</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-8"><span>First aid kit</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-9"><span>Binoculars (wildlife viewing in Lamar Valley)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-10"><span>Camera / GoPro &amp; chargers</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127828;</span>
+            <h3>Food &amp; Snacks</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="food">
+            <li><label><input type="checkbox" data-key="food-0"><span>Cooler with ice packs</span></label></li>
+            <li><label><input type="checkbox" data-key="food-1"><span>Reusable water bottles (1 per person)</span></label></li>
+            <li><label><input type="checkbox" data-key="food-2"><span>Adults: prepped whole-food meals</span></label></li>
+            <li><label><input type="checkbox" data-key="food-3"><span>Kids: sandwich supplies &amp; snack bags</span></label></li>
+            <li><label><input type="checkbox" data-key="food-4"><span>Trail mix, granola bars, dried fruit</span></label></li>
+            <li><label><input type="checkbox" data-key="food-5"><span>Fruit (apples, bananas, clementines)</span></label></li>
+            <li><label><input type="checkbox" data-key="food-6"><span>Picnic blanket &amp; utensil set</span></label></li>
+            <li><label><input type="checkbox" data-key="food-7"><span>Paper towels &amp; trash bags</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128663;</span>
+            <h3>Car &amp; Travel Gear</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="car">
+            <li><label><input type="checkbox" data-key="car-0"><span>Full tank of gas &amp; tire pressure check</span></label></li>
+            <li><label><input type="checkbox" data-key="car-1"><span>Phone mount &amp; car chargers</span></label></li>
+            <li><label><input type="checkbox" data-key="car-2"><span>Download offline Google Maps (MT, WY, ID, OR)</span></label></li>
+            <li><label><input type="checkbox" data-key="car-3"><span>Kids: tablets, headphones, coloring books</span></label></li>
+            <li><label><input type="checkbox" data-key="car-4"><span>Pillow &amp; blankets for car naps</span></label></li>
+            <li><label><input type="checkbox" data-key="car-5"><span>Portable phone battery pack</span></label></li>
+            <li><label><input type="checkbox" data-key="car-6"><span>Sunshade for windshield</span></label></li>
+            <li><label><input type="checkbox" data-key="car-7"><span>Umbrella stroller (if needed)</span></label></li>
+            <li><label><input type="checkbox" data-key="car-8"><span>Bear spray (Grand Teton / Yellowstone)</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#9989;</span>
+            <h3>Before You Leave</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="pre">
+            <li><label><input type="checkbox" data-key="pre-0"><span>Stop mail / package deliveries</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-1"><span>Set lights / smart home timers</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-2"><span>Water plants &amp; arrange pet care</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-3"><span>Lock all doors &amp; windows</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-4"><span>Take out trash &amp; clear fridge</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-5"><span>Share trip plan with family / neighbor</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-6"><span>Check weather forecast one more time</span></label></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
