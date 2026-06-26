@@ -664,7 +664,7 @@ strong .map-link:hover { color: var(--accent); }
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 2.5rem 1.5rem 5rem;
+  padding: 2.5rem 1.5rem;
   background: var(--primary-dark);
   color: rgba(255,255,255,0.7);
   font-size: 0.88rem;
@@ -910,7 +910,7 @@ strong .map-link:hover { color: var(--accent); }
 /* TRIP TRACKER */
 .tracker {
   position: fixed;
-  bottom: 1rem;
+  top: 4.25rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 300;
