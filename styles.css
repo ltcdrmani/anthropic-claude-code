@@ -316,6 +316,24 @@ ul, ol { padding-left: 1.25rem; }
   flex-shrink: 0;
 }
 
+.route-map {
+  margin: 1.5rem 0 0;
+}
+.route-map img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow);
+}
+.route-map figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
 /* DAY SECTIONS */
 .day-section { background: var(--bg-white); }
 .day-section--alt { background: var(--bg); }
