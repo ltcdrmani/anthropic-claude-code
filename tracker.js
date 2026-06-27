@@ -62,11 +62,13 @@
     {u:u(7,2,14,0,M),    lat:43.8337, lng:-110.5959, n:'Signal Mountain', d:6},
     {u:u(7,2,16,0,M),    lat:43.8133, lng:-111.1669, n:'Return to Tetonia', d:6},
 
-    {u:u(7,3,9,30,M),    lat:43.8133, lng:-111.1669, n:'Depart Tetonia', d:7},
-    {u:u(7,3,11,45,M),   lat:42.5938, lng:-114.4051, n:'Shoshone Falls', d:7},
-    {u:u(7,3,12,30,M),   lat:42.5938, lng:-114.4051, n:'Depart Twin Falls', d:7},
-    {u:u(7,3,14,0,M),    lat:43.6150, lng:-116.2023, n:'Boise Lunch Stop', d:7},
-    {u:u(7,3,15,15,M),   lat:43.6150, lng:-116.2023, n:'Depart Boise', d:7},
+    {u:u(7,3,7,30,M),    lat:43.8133, lng:-111.1669, n:'Depart Tetonia', d:7},
+    {u:u(7,3,10,0,M),    lat:43.4602, lng:-113.5622, n:'Craters of the Moon', d:7},
+    {u:u(7,3,11,30,M),   lat:43.4602, lng:-113.5622, n:'Depart Craters of the Moon', d:7},
+    {u:u(7,3,13,0,M),    lat:42.5938, lng:-114.4051, n:'Shoshone Falls', d:7},
+    {u:u(7,3,13,45,M),   lat:42.5938, lng:-114.4051, n:'Depart Twin Falls', d:7},
+    {u:u(7,3,15,45,M),   lat:43.6150, lng:-116.2023, n:'Boise Stretch Break', d:7},
+    {u:u(7,3,16,0,M),    lat:43.6150, lng:-116.2023, n:'Depart Boise', d:7},
     {u:u(7,3,18,45,P),   lat:45.6721, lng:-118.7886, n:'Radisson Hotel, Pendleton', d:7},
 
     {u:u(7,4,10,0,P),    lat:45.6721, lng:-118.7886, n:'Depart Pendleton', d:8},
