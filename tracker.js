@@ -49,7 +49,7 @@
     {u:u(7,1,11,0,M),    lat:43.7798, lng:-110.6324, n:'Elk Ranch Flats', d:5},
     {u:u(7,1,13,0,M),    lat:43.8558, lng:-110.6421, n:'Jackson Lake Lodge', d:5},
     {u:u(7,1,16,0,M),    lat:43.8133, lng:-111.1669, n:'Tetonia Check-in', d:5},
-    {u:u(7,1,18,0,M),    lat:43.8133, lng:-111.1669, n:'Depart for Oxbow Bend', d:5},
+    {u:u(7,1,18,0,M),    lat:43.8133, lng:-111.1669, n:'Depart Tetonia', d:5},
     {u:u(7,1,19,0,M),    lat:43.8634, lng:-110.5452, n:'Oxbow Bend Sunset', d:5},
     {u:u(7,1,20,45,M),   lat:43.8634, lng:-110.5452, n:'Depart Oxbow Bend', d:5},
     {u:u(7,1,21,45,M),   lat:43.8133, lng:-111.1669, n:'Return to Tetonia', d:5},
@@ -144,12 +144,56 @@
 
     var result = { day: prev.d, nextStop: next.n, dist: Math.round(distToNext) };
 
+    // Are we parked at a scheduled stop? Two cases:
+    //  (a) inside the dwell window: prev = arrival, next = matching "Depart X" (same coords)
+    //  (b) overstaying: scheduled departure has passed but we're still at the stop
+    var atStop = null;
     if (totalDist < 1) {
-      var stopName = prev.n.replace(/^Depart\s+/, '').replace(/^Return to\s+/, '');
-      result.status = 'on-track';
-      result.color = 'green';
-      result.delta = 0;
-      result.msg = 'Enjoy your time at ' + stopName + '!';
+      atStop = {
+        name: prev.n.replace(/^Depart\s+/, '').replace(/^Return to\s+/, ''),
+        departU: next.u,
+        dest: SCHED[ni + 1]
+      };
+    } else if (/^Depart\s/.test(prev.n) && distFromPrev < 1.5) {
+      atStop = {
+        name: prev.n.replace(/^Depart\s+/, ''),
+        departU: prev.u,
+        dest: next
+      };
+    }
+
+    if (atStop) {
+      var leaveIn = Math.round((atStop.departU - ms) / 60000); // +ve = mins until you should leave
+      var dest = atStop.dest;
+      result.status = 'at-stop';
+      result.stopName = atStop.name;
+      result.leaveIn = leaveIn;
+
+      if (dest) {
+        result.nextStop = dest.n;
+        result.dist = Math.round(hav(lat, lng, dest.lat, dest.lng));
+      } else {
+        result.nextStop = null;
+        result.dist = undefined;
+      }
+
+      var forDest = dest ? ' for ' + dest.n : '';
+      if (!dest) {
+        result.color = 'green';
+        result.msg = 'Enjoy your time at ' + atStop.name + '!';
+      } else if (leaveIn > 20) {
+        result.color = 'green';
+        result.msg = 'Relax at ' + atStop.name + ' — leave in ' + leaveIn + ' min' + forDest + '.';
+      } else if (leaveIn > 5) {
+        result.color = 'yellow';
+        result.msg = 'Start wrapping up at ' + atStop.name + ' — leave in ' + leaveIn + ' min' + forDest + '.';
+      } else if (leaveIn >= 0) {
+        result.color = 'orange';
+        result.msg = 'Time to head out' + forDest + ' — leave ' + atStop.name + ' in ' + leaveIn + ' min.';
+      } else {
+        result.color = 'red';
+        result.msg = 'Running ' + Math.abs(leaveIn) + ' min over at ' + atStop.name + ' — head out' + forDest + ' now.';
+      }
       return result;
     }
 
@@ -254,11 +298,16 @@
     var labels = {
       'on-track': 'On Track', ahead: 'Ahead of Schedule',
       behind: 'Behind Schedule', night: 'Overnight Rest',
-      pre: 'Before Trip', post: 'Trip Complete', 'off-route': 'Off Route'
+      pre: 'Before Trip', post: 'Trip Complete', 'off-route': 'Off Route',
+      'at-stop': 'At a Stop'
     };
     var statusLabel = labels[a.status] || a.status;
 
-    if (a.delta && Math.abs(a.delta) > 15) {
+    if (a.status === 'at-stop' && typeof a.leaveIn === 'number' && a.nextStop) {
+      summary.textContent = a.leaveIn >= 0
+        ? 'Leave in ' + a.leaveIn + ' min'
+        : 'Leave now (' + Math.abs(a.leaveIn) + ' min over)';
+    } else if (a.delta && Math.abs(a.delta) > 15) {
       summary.textContent = Math.abs(a.delta) + ' min ' + (a.delta > 0 ? 'ahead' : 'behind');
     } else {
       summary.textContent = statusLabel;
