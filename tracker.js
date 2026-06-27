@@ -205,7 +205,6 @@
 
     var toggle = el.querySelector('.tracker__toggle');
     var content = el.querySelector('.tracker__content');
-    var actionBtn = el.querySelector('.tracker__action');
     var dot = el.querySelector('.tracker__dot');
     var summary = el.querySelector('.tracker__summary');
 
@@ -213,26 +212,16 @@
       el.classList.toggle('tracker--expanded');
     });
 
-    actionBtn.addEventListener('click', function () {
-      if (tracking) {
-        stopTracking();
-        el.classList.remove('tracker--tracking');
-        actionBtn.textContent = 'Start Tracking';
-        actionBtn.classList.remove('tracker__action--stop');
-      } else {
-        startTracking(el, content, dot, summary);
-        actionBtn.textContent = 'Stop Tracking';
-        actionBtn.classList.add('tracker__action--stop');
-      }
-    });
-
     var initial = analyze(0, 0);
     if (initial.status === 'pre' || initial.status === 'post') {
       summary.textContent = initial.msg;
       dot.className = 'tracker__dot tracker__dot--' + initial.color;
     } else {
-      summary.textContent = 'Enable GPS to track your trip';
+      summary.textContent = 'Locating…';
     }
+
+    // Automatically begin tracking on load.
+    startTracking(el, content, dot, summary);
   }
 
   function startTracking(el, content, dot, summary) {
@@ -255,14 +244,6 @@
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
-  }
-
-  function stopTracking() {
-    tracking = false;
-    if (watchId !== null) {
-      navigator.geolocation.clearWatch(watchId);
-      watchId = null;
-    }
   }
 
   function updateDisplay(a, content, dot, summary) {

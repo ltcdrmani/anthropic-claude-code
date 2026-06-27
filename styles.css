@@ -1035,33 +1035,8 @@ strong .map-link:hover { color: var(--accent); }
 .tracker__advice {
   font-size: 0.83rem;
   line-height: 1.45;
-  margin: 0 0 0.6rem;
+  margin: 0;
   opacity: 0.95;
-}
-.tracker__action {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.08);
-  color: #fff;
-  font-family: var(--font);
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.tracker__action:hover {
-  background: rgba(255,255,255,0.18);
-  border-color: rgba(255,255,255,0.4);
-}
-.tracker__action--stop {
-  border-color: rgba(231,76,60,0.4);
-  background: rgba(231,76,60,0.15);
-}
-.tracker__action--stop:hover {
-  background: rgba(231,76,60,0.3);
 }
 .tracker__error {
   font-size: 0.85rem;
