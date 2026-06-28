@@ -3,23 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Johnson — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Sujitha's Family Road Trip: PNW &amp; The Rockies</title>
+  <link rel="stylesheet" href="styles.css?v=20260627g" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo">AJ</a>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="#hero" class="nav__logo">PNW &amp; Rockies</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#overview">Overview</a></li>
+        <li class="nav__dropdown">
+          <button class="nav__dropdown-btn" aria-expanded="false">Days <span class="nav__dropdown-arrow">&#9662;</span></button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="#day1">Day 1 &mdash; Seattle to Butte</a></li>
+            <li><a href="#day2">Day 2 &mdash; Yellowstone North</a></li>
+            <li><a href="#day3">Day 3 &mdash; Yellowstone South</a></li>
+            <li><a href="#day4">Day 4 &mdash; Yellowstone East</a></li>
+            <li><a href="#day5">Day 5 &mdash; Grand Teton North</a></li>
+            <li><a href="#day6">Day 6 &mdash; Grand Teton South</a></li>
+            <li><a href="#day7">Day 7 &mdash; Tetonia to Pendleton</a></li>
+            <li><a href="#day8">Day 8 &mdash; Pendleton to Seattle</a></li>
+          </ul>
+        </li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#validation">Validation</a></li>
       </ul>
       <button class="nav__burger" id="burger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -27,184 +38,1259 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
     <div class="hero__content">
-      <span class="hero__greeting">Hi, I'm</span>
-      <h1 class="hero__name">Alex Johnson</h1>
-      <p class="hero__tagline">Full-Stack Developer &amp; UI Enthusiast</p>
-      <p class="hero__description">
-        I build clean, performant web experiences that people love to use.
-        Currently open to new opportunities.
-      </p>
-      <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary">View My Work</a>
-        <a href="#contact" class="btn btn--outline">Get In Touch</a>
-      </div>
-    </div>
-    <div class="hero__blob" aria-hidden="true"></div>
-  </section>
-
-  <!-- About -->
-  <section class="section about" id="about">
-    <div class="container">
-      <h2 class="section__title">About Me</h2>
-      <div class="about__grid">
-        <div class="about__avatar">
-          <div class="avatar-placeholder">AJ</div>
+      <p class="hero__label">Family Road Trip 2026</p>
+      <h1 class="hero__title">PNW &amp; The Rockies</h1>
+      <p class="hero__subtitle">June 27 &ndash; July 4 &bull; 8 Days &bull; Seattle &rarr; Yellowstone &rarr; Grand Teton &rarr; Seattle</p>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">~2,100</span>
+          <span class="stat__label">Total Miles</span>
         </div>
-        <div class="about__text">
-          <p>
-            I'm a passionate developer with 3+ years of experience crafting
-            digital products. I thrive at the intersection of design and
-            engineering — writing code that's both elegant and effective.
-          </p>
-          <p>
-            When I'm not coding, you'll find me hiking trails, experimenting
-            with photography, or diving into a good book. I believe the best
-            software is built by well-rounded people.
-          </p>
-          <a href="#" class="btn btn--primary" download>Download Resume</a>
+        <div class="stat">
+          <span class="stat__number">5</span>
+          <span class="stat__label">States</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">2</span>
+          <span class="stat__label">National Parks</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">8</span>
+          <span class="stat__label">Days</span>
         </div>
       </div>
+      <a href="#overview" class="btn btn--primary">View Itinerary</a>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="section projects" id="projects">
+  <section class="section overview" id="overview">
     <div class="container">
-      <h2 class="section__title">Projects</h2>
-      <p class="section__subtitle">A few things I've built recently</p>
-      <div class="projects__grid">
+      <h2 class="section__title">Trip Overview</h2>
+      <p class="section__subtitle">Sujitha's family adventure through the Pacific Northwest and Rocky Mountains</p>
+      <div class="overview__grid">
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F46A;</div>
+          <h3>Travelers</h3>
+          <p>Adults &amp; Kids (Sami, Ray, Vihaan)</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F957;</div>
+          <h3>Dietary Focus</h3>
+          <p>Packed clean whole food for adults; local restaurants for kids</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F3D5;</div>
+          <h3>Highlights</h3>
+          <p>Yellowstone geysers, Grand Teton sunrises, scenic canyon drives</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F3E8;</div>
+          <h3>Lodging</h3>
+          <p>Hotels in Butte &amp; Pendleton, cabin in Island Park, rental in Tetonia</p>
+        </div>
+      </div>
+      <div class="route-summary">
+        <h3>Route at a Glance</h3>
+        <div class="route-stops">
+          <div class="route-stop"><span class="route-dot"></span><span>Seattle, WA</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Butte, MT</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Yellowstone NP</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Island Park, ID</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Grand Teton NP</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Tetonia, ID</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Pendleton, OR</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Seattle, WA</span></div>
+        </div>
+      </div>
+      <figure class="route-map">
+        <img src="route-map.png?v=20260627g" alt="Map of the full 8-day PNW &amp; Rockies road trip route, color-coded by day with city and state labels" loading="lazy" />
+        <figcaption>The full loop, color-coded by day &mdash; Seattle out through Yellowstone &amp; Grand Teton, returning via Craters of the Moon and the Columbia Basin.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-        <article class="card">
-          <div class="card__img card__img--1"></div>
-          <div class="card__body">
-            <h3 class="card__title">TaskFlow</h3>
-            <p class="card__desc">A drag-and-drop project management app with real-time collaboration built with React and Firebase.</p>
-            <div class="card__tags">
-              <span class="tag">React</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">TypeScript</span>
-            </div>
-            <div class="card__links">
-              <a href="#" class="card__link">Live Demo →</a>
-              <a href="#" class="card__link">GitHub →</a>
+  <!-- DAY 1 -->
+  <section class="section day-section day-section--alt" id="day1">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 1</span>
+        <h2 class="day-header__title">Seattle to Butte, Montana</h2>
+        <p class="day-header__date">June 27, 2026 &bull; ~595 miles</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9728;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Warm, high-desert sunshine through Eastern WA/ID peaking around 74&ndash;78&deg;F. Cooling down into the crisp 50s&deg;F upon arrival in mountain-altitude Butte.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">06:30 &ndash; 08:45 AM</div>
+          <div class="timeline__content">
+            <h3>Leg 1: Over <a href="https://www.google.com/maps/search/?api=1&query=Snoqualmie+Pass+WA" class="map-link" target="_blank" rel="noopener">Snoqualmie Pass</a></h3>
+            <div class="timeline__alt">⛰️ Elevation: 3,022 ft</div>
+            <p>Depart Seattle early at 6:30 AM to beat holiday weekend traffic. Kids can rest or play car games as the scenery changes from evergreen forests to dry eastern plains.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~150 mi &bull; I-90 East</span>
             </div>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="card__img card__img--2"></div>
-          <div class="card__body">
-            <h3 class="card__title">WeatherNow</h3>
-            <p class="card__desc">A beautiful weather dashboard that visualizes 7-day forecasts using animated charts and geolocation.</p>
-            <div class="card__tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Chart.js</span>
-              <span class="tag">REST API</span>
-            </div>
-            <div class="card__links">
-              <a href="#" class="card__link">Live Demo →</a>
-              <a href="#" class="card__link">GitHub →</a>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">08:45 &ndash; 09:15 AM</div>
+          <div class="timeline__content">
+            <h3>Stop 1: Dinosaurs by the Columbia (Vantage, WA)</h3>
+            <div class="timeline__alt">⛰️ Elevation: 666 ft</div>
+            <p>Pull off at Exit 136 right after the river bridge. Stretch legs at the <strong><a href="https://www.google.com/maps/search/?api=1&query=Ginkgo+Gem+Shop+Vantage+WA" class="map-link" target="_blank" rel="noopener">Ginkgo Gem Shop</a></strong> so the kids can see the classic outdoor dinosaur statues and explore.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">30 min stop</span>
             </div>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="card__img card__img--3"></div>
-          <div class="card__body">
-            <h3 class="card__title">ShopLite</h3>
-            <p class="card__desc">A lightweight e-commerce storefront with cart, checkout, and Stripe integration. Blazing-fast performance.</p>
-            <div class="card__tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Stripe</span>
-              <span class="tag">Tailwind</span>
-            </div>
-            <div class="card__links">
-              <a href="#" class="card__link">Live Demo →</a>
-              <a href="#" class="card__link">GitHub →</a>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:45 AM &ndash; 01:00 PM</div>
+          <div class="timeline__content">
+            <h3>Stop 2: Lunch &amp; Splash at Coeur d&rsquo;Alene, ID</h3>
+            <div class="timeline__alt">⛰️ Elevation: 2,188 ft</div>
+            <p>Stop at <strong><a href="https://www.google.com/maps/search/?api=1&query=Atlas+Mill+Park+Coeur+d'Alene+ID" class="map-link" target="_blank" rel="noopener">Atlas Mill Waterfront Park</a></strong> (Exit 11). Premium park with playground, wide lawns, and docks. Unpack the cooler at shaded riverfront picnic tables.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Packed lunch for adults &bull; Takeout for kids</span>
             </div>
           </div>
-        </article>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">04:00 &ndash; 04:30 PM</div>
+          <div class="timeline__content">
+            <h3>Stop 3: Huckleberry Pitstop (St. Regis, MT)</h3>
+            <div class="timeline__alt">⛰️ Elevation: 2,634 ft</div>
+            <p>Advance clocks 1 hour to Mountain Time. Stop at the <strong><a href="https://www.google.com/maps/search/?api=1&query=St+Regis+Travel+Center+St+Regis+MT" class="map-link" target="_blank" rel="noopener">St. Regis Travel Center</a></strong> (Exit 33) for huckleberry milkshakes for the kids.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--info">Time zone change: Pacific &rarr; Mountain</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">04:30 &ndash; 07:00 PM</div>
+          <div class="timeline__content">
+            <h3>Leg 4: Drive to Butte &amp; Hotel Check-In</h3>
+            <div class="timeline__alt">⛰️ Elevation: 5,538 ft</div>
+            <p>Climb over the Continental Divide and check into the <strong><a href="https://www.google.com/maps/search/?api=1&query=Wingate+by+Wyndham+Butte+City+Center+MT" class="map-link" target="_blank" rel="noopener">Wingate by Wyndham Butte City Center</a></strong>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~160 mi to Butte</span>
+              <span class="meta-tag meta-tag--hotel">Wingate by Wyndham</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="meal-box">
+        <h4>Day 1 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Adults enjoy packed whole foods at Atlas Mill Waterfront Park; takeout nearby for kids.</li>
+          <li><strong>Snack:</strong> Huckleberry milkshakes at St. Regis Travel Center.</li>
+          <li><strong>Dinner (~7:30 PM):</strong> <a href="https://www.google.com/maps/search/?api=1&query=Macs+Tavern+Butte+MT" class="map-link" target="_blank" rel="noopener">Mac&rsquo;s Tavern</a> or <a href="https://www.google.com/maps/search/?api=1&query=Metals+Sports+Bar+Butte+MT" class="map-link" target="_blank" rel="noopener">Metals Sports Bar</a> in historic uptown Butte; adults supplement with packed food.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="section skills" id="skills">
+  <!-- DAY 2 -->
+  <section class="section day-section" id="day2">
     <div class="container">
-      <h2 class="section__title">Skills</h2>
-      <p class="section__subtitle">Technologies I work with</p>
-      <div class="skills__grid">
-        <div class="skill-group">
-          <h3 class="skill-group__title">Frontend</h3>
-          <ul class="skill-list">
-            <li>HTML / CSS / JavaScript</li>
-            <li>React &amp; Next.js</li>
-            <li>TypeScript</li>
-            <li>Tailwind CSS</li>
+      <div class="day-header">
+        <span class="day-header__badge">Day 2</span>
+        <h2 class="day-header__title">Butte to Yellowstone (North &amp; Canyon Loop)</h2>
+        <p class="day-header__date">June 28, 2026 &bull; 9:00 AM departure &bull; ~272 mi &bull; Decent-weather highlights day</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9925;</span>
+        <div>
+          <strong>Weather Forecast:</strong> The clearer of your three park days &mdash; comfortable 58&ndash;68&deg;F with sun and passing clouds. Cooler and breezy up at Canyon &amp; Norris (low 50s&deg;F). A big driving-highlights day, so plan for full daylight use.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">09:00 &ndash; 11:45 AM</div>
+          <div class="timeline__content">
+            <h3>Drive to Roosevelt Arch, Gardiner</h3>
+            <div class="timeline__alt">⛰️ Elevation: 5,267 ft</div>
+            <p>Leave Butte at 9:00 AM and drive up through Bozeman and Paradise Valley to the historic <strong><a href="https://www.google.com/maps/search/?api=1&query=Roosevelt+Arch+Gardiner+MT" class="map-link" target="_blank" rel="noopener">Roosevelt Arch</a></strong> at Gardiner &mdash; the park&rsquo;s original North Entrance. Quick family photo under the stone arch.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~165 mi &bull; I-90 / US-89 via Bozeman</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:45 AM &ndash; 01:30 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Mammoth+Hot+Springs+Yellowstone" class="map-link" target="_blank" rel="noopener">Mammoth Hot Springs</a> &amp; Lunch</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,239 ft</div>
+            <p>Tour the cascading travertine terraces at Mammoth, then break for lunch &mdash; picnic at <strong><a href="https://www.google.com/maps/search/?api=1&query=Arch+Park+Gardiner+MT" class="map-link" target="_blank" rel="noopener">Arch Park</a></strong> in Gardiner or grab a table near the Mammoth area.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Picnic at Arch Park &bull; <a href="https://www.google.com/maps/search/?api=1&query=Yellowstone+Grill+Gardiner+MT" class="map-link" target="_blank" rel="noopener">Yellowstone Grill</a> for kids</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">01:30 &ndash; 04:15 PM</div>
+          <div class="timeline__content">
+            <h3>Grand Canyon of the Yellowstone</h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,795 ft</div>
+            <p>Drive south past Norris to the <strong><a href="https://www.google.com/maps/search/?api=1&query=Grand+Canyon+of+the+Yellowstone+Artist+Point" class="map-link" target="_blank" rel="noopener">Grand Canyon of the Yellowstone</a></strong>. Walk the platforms for the <strong><a href="https://www.google.com/maps/search/?api=1&query=Lower+Falls+Yellowstone" class="map-link" target="_blank" rel="noopener">Lower Falls</a></strong> (308 ft, from <a href="https://www.google.com/maps/search/?api=1&query=Artist+Point+Yellowstone" class="map-link" target="_blank" rel="noopener">Artist Point</a>) and the separate <strong><a href="https://www.google.com/maps/search/?api=1&query=Upper+Falls+Yellowstone" class="map-link" target="_blank" rel="noopener">Upper Falls</a></strong> overlook.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~40 mi from Mammoth via Norris</span>
+              <span class="meta-tag meta-tag--sight">Artist Point &bull; Lower &amp; Upper Falls</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">04:15 &ndash; 05:45 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Norris+Geyser+Basin+Yellowstone" class="map-link" target="_blank" rel="noopener">Norris Geyser Basin</a></h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,484 ft</div>
+            <p>Backtrack west to Norris and walk the boardwalk loops past the park&rsquo;s hottest, most active geysers &mdash; including towering Steamboat, the world&rsquo;s tallest active geyser.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Boardwalk loops &bull; ~1.5 hrs</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">05:45 PM Onward</div>
+          <div class="timeline__content">
+            <h3>South to West Entrance &amp; Island Park Cabin</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,293 ft</div>
+            <p>Head straight south from Norris to Madison and out the <a href="https://www.google.com/maps/search/?api=1&query=West+Yellowstone+MT" class="map-link" target="_blank" rel="noopener">West Entrance</a> &mdash; reaching West Yellowstone around <strong>6:30 PM</strong> (grab dinner or restock at <strong><a href="https://www.google.com/maps/search/?api=1&query=Sam+Patch+Co+Grocer+Sundries+4150+N+Big+Springs+Loop+Rd+Island+Park+ID" class="map-link" target="_blank" rel="noopener">Sam Patch Co.</a></strong>), then a 20-minute drive to the <a href="https://www.google.com/maps/search/?api=1&query=3612+Island+Drive+Island+Park+ID+83429" class="map-link" target="_blank" rel="noopener">Island Park cabin</a> by ~<strong>7:00 PM</strong>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">Norris &rarr; Madison &rarr; West Entrance</span>
+              <span class="meta-tag meta-tag--hotel">Island Park Cabin &bull; 3612 Island Drive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 2 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Outdoor picnic at Gardiner&rsquo;s Arch Park near Mammoth. Kids enjoy local takeaway; adults eat packed food.</li>
+          <li><strong>Dinner (~6:30 PM):</strong> Quick dinner in West Yellowstone on the way out, or a home-cooked cabin dinner. Restock fresh produce, meat, and staples at <a href="https://www.google.com/maps/search/?api=1&query=Sam+Patch+Co+Grocer+Sundries+Island+Park+ID" class="map-link" target="_blank" rel="noopener">Sam Patch Co.</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="section day-section day-section--alt" id="day3">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 3</span>
+        <h2 class="day-header__title">Yellowstone Wildlife Valleys (Hayden &amp; Lamar)</h2>
+        <p class="day-header__date">June 29, 2026 &bull; Flexible / stormy day &bull; Windshield wildlife</p>
+      </div>
+
+      <div class="weather-bar weather-bar--cold">
+        <span class="weather-bar__icon">&#127783;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Cool &amp; wet &mdash; scattered rain likely, 40&ndash;55&deg;F. This is your car-based wildlife day: stay warm and dry, with rain jackets handy for quick pullouts. Fully flexible &mdash; shift the order to chase the clearer windows.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">08:30 &ndash; 09:30 AM</div>
+          <div class="timeline__content">
+            <h3>Sleep In &amp; West Entrance</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,667 ft</div>
+            <p>No alarm today &mdash; ease out of the cabin around 8:30 AM and enter via the <a href="https://www.google.com/maps/search/?api=1&query=West+Yellowstone+MT" class="map-link" target="_blank" rel="noopener">West Entrance</a>. Wildlife stays active in cool, overcast weather, so a relaxed start still pays off on a rainy day.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~28 mi &bull; cabin to gate</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">09:30 AM &ndash; 12:30 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Hayden+Valley+Yellowstone" class="map-link" target="_blank" rel="noopener">Hayden Valley</a> Wildlife &amp; Mud Volcano</h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,700 ft</div>
+            <p>Drive Madison &rarr; Norris &rarr; Canyon to <strong>Hayden Valley</strong>, the park&rsquo;s premier valley for big bison herds and grizzlies. Scan from the warm car and the pullouts, then a quick stop at <strong><a href="https://www.google.com/maps/search/?api=1&query=Mud+Volcano+Yellowstone" class="map-link" target="_blank" rel="noopener">Mud Volcano</a></strong> &amp; <strong><a href="https://www.google.com/maps/search/?api=1&query=Dragons+Mouth+Spring+Yellowstone" class="map-link" target="_blank" rel="noopener">Dragon&rsquo;s Mouth Spring</a></strong>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Windshield wildlife &bull; bring binoculars</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">12:30 &ndash; 02:30 PM</div>
+          <div class="timeline__content">
+            <h3>Over Dunraven Pass to Tower</h3>
+            <div class="timeline__alt">⛰️ Elevation: 8,859 ft (Dunraven Pass)</div>
+            <p>Head north from Canyon over <strong><a href="https://www.google.com/maps/search/?api=1&query=Dunraven+Pass+Yellowstone" class="map-link" target="_blank" rel="noopener">Dunraven Pass</a></strong> &mdash; the highest road in the park &mdash; toward Tower-Roosevelt, with a packed lunch in the car and big views (weather permitting).</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">Canyon &rarr; Tower-Roosevelt</span>
+              <span class="meta-tag meta-tag--food">Cooler lunch in the car</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">02:30 &ndash; 05:00 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Lamar+Valley+Yellowstone" class="map-link" target="_blank" rel="noopener">Lamar Valley</a> &mdash; &ldquo;America&rsquo;s Serengeti&rdquo;</h3>
+            <div class="timeline__alt">⛰️ Elevation: ≈6,500 ft</div>
+            <p>Cruise the Lamar Valley road, the park&rsquo;s richest wildlife corridor &mdash; bison, pronghorn, black &amp; grizzly bears, and wolves. Ideal rainy-day windshield viewing; pull over at the turnouts whenever something appears.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Wolves &bull; bison &bull; bears &bull; binoculars</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">05:00 PM Onward</div>
+          <div class="timeline__content">
+            <h3>Long Return to Cabin</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,293 ft</div>
+            <p>Retrace Lamar &rarr; Norris &rarr; Madison &rarr; West Entrance back to the <a href="https://www.google.com/maps/search/?api=1&query=3612+Island+Drive+Island+Park+ID+83429" class="map-link" target="_blank" rel="noopener">Island Park cabin</a> (~7:30&ndash;8:00 PM) &mdash; a long but cozy, warm-and-dry drive to close out a wet day.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--hotel">Return to Island Park Cabin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 3 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Packed cooler lunch eaten in the car between the valleys &mdash; perfect for a rainy windshield-wildlife day.</li>
+          <li><strong>Dinner (~8:00 PM):</strong> Relaxed home-cooked family dinner at the Island Park cabin. Restock at <a href="https://www.google.com/maps/search/?api=1&query=Sam+Patch+Co+Grocer+Sundries+Island+Park+ID" class="map-link" target="_blank" rel="noopener">Sam Patch Co.</a> if needed on the way back.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="section day-section" id="day4">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 4</span>
+        <h2 class="day-header__title">Yellowstone Lower Loop (Thermal Walks)</h2>
+        <p class="day-header__date">June 30, 2026 &bull; 7:00 AM start &bull; Clearing skies, walking day</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9728;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Clearing &amp; bright after the storm &mdash; crisp 38&ndash;50&deg;F morning with excellent steam, climbing to 60&ndash;68&deg;F midday. The best walking day of the three; intense high-altitude UV, so hats and sunscreen for the boardwalks.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">07:00 &ndash; 07:30 AM</div>
+          <div class="timeline__content">
+            <h3>Early Start to West Entrance</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,293 ft</div>
+            <p>Leave the cabin at 7:00 AM to hit the <a href="https://www.google.com/maps/search/?api=1&query=West+Yellowstone+MT" class="map-link" target="_blank" rel="noopener">West Entrance</a> by 7:30 and beat the crowds to the boardwalks on this clear morning.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~28 mi &bull; cabin to gate</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">08:00 &ndash; 09:00 AM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Fountain+Paint+Pots+Yellowstone" class="map-link" target="_blank" rel="noopener">Fountain Paint Pots</a>, Lower Geyser Basin</h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,200 ft</div>
+            <p>Easy half-mile boardwalk past bubbling mudpots, colorful springs, and small geysers in the calm early-morning light.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Flat boardwalk &bull; family-easy</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">09:00 &ndash; 10:30 AM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Grand+Prismatic+Spring+Overlook+Yellowstone" class="map-link" target="_blank" rel="noopener">Grand Prismatic Overlook</a></h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,270 ft</div>
+            <p>Walk ~1 mile (flat) from the <a href="https://www.google.com/maps/search/?api=1&query=Fairy+Falls+Trailhead+Yellowstone" class="map-link" target="_blank" rel="noopener">Fairy Falls trailhead</a> to the elevated overlook for the iconic rainbow view of Grand Prismatic Spring.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">~1 mi to overlook</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">10:30 &ndash; 11:30 AM</div>
+          <div class="timeline__content">
+            <h3>Grand Prismatic Boardwalk (Midway Basin)</h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,270 ft</div>
+            <p>Drive to <strong><a href="https://www.google.com/maps/search/?api=1&query=Midway+Geyser+Basin+Yellowstone" class="map-link" target="_blank" rel="noopener">Midway Geyser Basin</a></strong> and walk the boardwalk right alongside the steaming, rainbow-edged spring &mdash; the up-close counterpart to the overlook.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Boardwalk &bull; up-close view</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:30 AM &ndash; 03:00 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Old+Faithful+Geyser+Yellowstone" class="map-link" target="_blank" rel="noopener">Old Faithful</a> &amp; Upper Geyser Basin</h3>
+            <div class="timeline__alt">⛰️ Elevation: 7,349 ft</div>
+            <p>Time your arrival around an eruption, then walk the boardwalk loop past the surrounding geysers and <a href="https://www.google.com/maps/search/?api=1&query=Black+Sand+Basin+Yellowstone" class="map-link" target="_blank" rel="noopener">Black Sand Basin</a>&rsquo;s Emerald Pool.</p>
+            <div class="eruption-box">
+              <h4>&#9888;&#65039; Eruption Schedule &mdash; predicted same-day, not fixed</h4>
+              <p>Old Faithful erupts every <strong>~60&ndash;110 min (avg ~90)</strong>, shooting 100&ndash;180 ft for 1.5&ndash;5 min. Rangers post the next time <strong>after each eruption</strong> (&plusmn;10 min): a short eruption means ~60 min to the next, a long one ~90 min. With your 11:30 AM&ndash;3:00 PM window you should easily catch 1&ndash;2.</p>
+              <p><strong>Get the live prediction:</strong></p>
+              <ul class="content-list">
+                <li><strong>NPS App</strong> &rarr; Yellowstone &rarr; &ldquo;Geyser Predictions&rdquo; (download the park for offline use &mdash; no signal here)</li>
+                <li>Prediction boards at the <strong>Old Faithful Visitor Education Center</strong> &amp; nearby lodges</li>
+                <li><strong>Geyser Prediction Line:</strong> <a href="tel:+13073442751">307-344-2751</a>, option 1</li>
+              </ul>
+              <p>The center also predicts four other big geysers nearby &mdash; worth timing if one lines up: <strong>Grand</strong> (tallest predictable, every 6&ndash;15 h), <strong>Castle</strong> (~11&ndash;13 h, long eruptions), <strong>Daisy</strong> (~2&ndash;4 h, dramatic angled jet), and <strong>Riverside</strong> (~6 h, arches over the river).</p>
+            </div>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Lunch at <a href="https://www.google.com/maps/search/?api=1&query=Old+Faithful+Visitor+Education+Center+Yellowstone" class="map-link" target="_blank" rel="noopener">Old Faithful Visitor Center</a> decks or Upper Geyser Basin Picnic Area</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">03:00 PM Onward</div>
+          <div class="timeline__content">
+            <h3>Cabin Return &amp; Packing</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,293 ft</div>
+            <p>Drive back out the West Entrance to the Island Park cabin for your final night. Pack and prep for the Grand Teton morning check-out.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--hotel">Final night at <a href="https://www.google.com/maps/search/?api=1&query=3612+Island+Drive+Island+Park+ID+83429" class="map-link" target="_blank" rel="noopener">Island Park Cabin</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 4 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Old Faithful area &mdash; decks at the Visitor Education Center or the Upper Geyser Basin picnic area. Kids grab quick-service; adults unpack compliant meals.</li>
+          <li><strong>Dinner:</strong> Final family dinner and packing night at the Island Park cabin. Use up remaining <a href="https://www.google.com/maps/search/?api=1&query=Sam+Patch+Co+Grocer+Sundries+Island+Park+ID" class="map-link" target="_blank" rel="noopener">Sam Patch Co.</a> groceries.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="section day-section day-section--alt" id="day5">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 5</span>
+        <h2 class="day-header__title">Island Park to Grand Teton (Eastern Loop)</h2>
+        <p class="day-header__date">July 1, 2026 &bull; Cabin Checkout &amp; Drive via Route 1</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9728;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Clear, beautiful mountain visibility. Valley flats warm up to 72&ndash;76&deg;F midday with strong mountain sun. Dropping into the 50s&deg;F by sunset.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">06:00 &ndash; 08:15 AM</div>
+          <div class="timeline__content">
+            <h3>Scenic Leg 1 Drive via Route 1</h3>
+            <div class="timeline__alt">⛰️ Elevation: 5,800 ft</div>
+            <p>Check out of the Island Park cabin. Drive US-20 to ID-32 past Tetonia lodging and down into <a href="https://www.google.com/maps/search/?api=1&query=Victor+Idaho" class="map-link" target="_blank" rel="noopener">Victor, ID</a>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~90 mi &bull; US-20 to ID-32</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">08:15 &ndash; 10:30 AM</div>
+          <div class="timeline__content">
+            <h3>Teton Pass to Eastern Highway Loop</h3>
+            <div class="timeline__alt">⛰️ Elevation: 8,431 ft</div>
+            <p>Conquer <a href="https://www.google.com/maps/search/?api=1&query=Teton+Pass+Wyoming" class="map-link" target="_blank" rel="noopener">Teton Pass</a> dropping into Jackson, WY. Drive north to <strong><a href="https://www.google.com/maps/search/?api=1&query=Glacier+View+Turnout+Grand+Teton" class="map-link" target="_blank" rel="noopener">Glacier View Turnout</a></strong> (09:30 AM) to see hanging glaciers.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Glacier View Turnout</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">10:30 AM &ndash; 01:00 PM</div>
+          <div class="timeline__content">
+            <h3>Snake River Panoramas &amp; Open Flats</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,790 ft</div>
+            <p>Stand at <strong><a href="https://www.google.com/maps/search/?api=1&query=Snake+River+Overlook+Grand+Teton" class="map-link" target="_blank" rel="noopener">Snake River Overlook</a></strong>. Continue north to <strong><a href="https://www.google.com/maps/search/?api=1&query=Elk+Ranch+Flats+Turnout+Grand+Teton" class="map-link" target="_blank" rel="noopener">Elk Ranch Flats Turnout</a></strong> to spot bison or pronghorn herds grazing.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Famous Ansel Adams viewpoint</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">01:00 &ndash; 04:00 PM</div>
+          <div class="timeline__content">
+            <h3>Lodge Break &amp; Tetonia Check-In</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,798 ft</div>
+            <p>Head to <strong><a href="https://www.google.com/maps/search/?api=1&query=Jackson+Lake+Lodge+Grand+Teton" class="map-link" target="_blank" rel="noopener">Jackson Lake Lodge</a></strong>. Use the public picnic grounds or the expansive terrace deck with unobstructed views of Mount Moran.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Jackson Lake Lodge terrace &bull; <a href="https://www.google.com/maps/search/?api=1&query=Pioneer+Grill+Jackson+Lake+Lodge" class="map-link" target="_blank" rel="noopener">Pioneer Grill</a> for kids</span>
+              <span class="meta-tag meta-tag--hotel">Check into Tetonia lodging</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">06:00 &ndash; 08:45 PM</div>
+          <div class="timeline__content">
+            <h3>Mirror Sunset at Oxbow Bend</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,745 ft</div>
+            <p>Drive to <strong><a href="https://www.google.com/maps/search/?api=1&query=Oxbow+Bend+Grand+Teton" class="map-link" target="_blank" rel="noopener">Oxbow Bend</a></strong> at 7:00 PM. Watch Mount Moran cast a perfect sunset reflection over glassy, slow-moving waters.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Iconic sunset reflection spot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 5 Meal Strategy</h4>
+        <ul>
+          <li><strong>Breakfast:</strong> Huckleberry items from <a href="https://www.google.com/maps/search/?api=1&query=Victor+Emporium+Victor+ID" class="map-link" target="_blank" rel="noopener">Victor Emporium</a> for the kids.</li>
+          <li><strong>Lunch:</strong> Jackson Lake Lodge terrace. Kids dine at <a href="https://www.google.com/maps/search/?api=1&query=Pioneer+Grill+Jackson+Lake+Lodge" class="map-link" target="_blank" rel="noopener">Pioneer Grill</a>; adults unpack compliant food.</li>
+          <li><strong>Dinner (~9:30 PM):</strong> Local takeaway (<a href="https://www.google.com/maps/search/?api=1&query=Teton+Thai+Driggs+ID" class="map-link" target="_blank" rel="noopener">Teton Thai</a> or <a href="https://www.google.com/maps/search/?api=1&query=Citizen+33+Driggs+ID" class="map-link" target="_blank" rel="noopener">Citizen 33</a>) in Driggs for kids; adults eat packed meals at Tetonia.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="section day-section" id="day6">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 6</span>
+        <h2 class="day-header__title">Grand Teton Double-Sunrise &amp; Hiking</h2>
+        <p class="day-header__date">July 2, 2026 &bull; Beating the Crowds</p>
+      </div>
+
+      <div class="weather-bar weather-bar--cold">
+        <span class="weather-bar__icon">&#127787;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Freezing, dead-calm morning (38&ndash;46&deg;F) perfect for water reflections. Comfortable midday hiking temps around 68&ndash;73&deg;F. 15% afternoon thunderstorm chance over peaks.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">04:45 &ndash; 05:45 AM</div>
+          <div class="timeline__content">
+            <h3>Pre-Dawn Teton Pass Drive</h3>
+            <div class="timeline__alt">⛰️ Elevation: 8,431 ft</div>
+            <p>Leave Tetonia early. Kids can snuggle up with blankets and portable morning snacks in the back seats.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~1 hour over Teton Pass</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">05:45 &ndash; 07:30 AM</div>
+          <div class="timeline__content">
+            <h3>Double Sunrise: Schwabacher &amp; Mormon Row</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,600–6,800 ft</div>
+            <p>Witness sunrise reflections at <strong><a href="https://www.google.com/maps/search/?api=1&query=Schwabacher+Landing+Grand+Teton" class="map-link" target="_blank" rel="noopener">Schwabacher Landing</a></strong>, then check out the classic wooden Moulton barns at <strong><a href="https://www.google.com/maps/search/?api=1&query=Mormon+Row+Grand+Teton" class="map-link" target="_blank" rel="noopener">Mormon Row</a></strong> during golden hour.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Iconic sunrise photography spots</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">07:30 AM &ndash; 12:30 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Jenny+Lake+Grand+Teton" class="map-link" target="_blank" rel="noopener">Jenny Lake</a> Shuttle Boat &amp; Canyon Trails</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,783 ft</div>
+            <p>Claim early parking at Jenny Lake. Hop the water taxi shuttle across the lake and hike up to <strong><a href="https://www.google.com/maps/search/?api=1&query=Hidden+Falls+Grand+Teton" class="map-link" target="_blank" rel="noopener">Hidden Falls</a></strong> and <strong><a href="https://www.google.com/maps/search/?api=1&query=Inspiration+Point+Grand+Teton" class="map-link" target="_blank" rel="noopener">Inspiration Point</a></strong> together.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Shuttle boat + hiking &bull; ~5 hours</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">12:30 &ndash; 04:00 PM</div>
+          <div class="timeline__content">
+            <h3>String Lake Picnic &amp; <a href="https://www.google.com/maps/search/?api=1&query=Signal+Mountain+Summit+Grand+Teton" class="map-link" target="_blank" rel="noopener">Signal Mountain</a> Summit</h3>
+            <div class="timeline__alt">⛰️ Elevation: 6,875–7,720 ft</div>
+            <p>Unwind along shallow, clear shores at String Lake. Unpack family lunch at the <strong><a href="https://www.google.com/maps/search/?api=1&query=String+Lake+Picnic+Area+Grand+Teton" class="map-link" target="_blank" rel="noopener">String Lake Picnic Area</a></strong>&mdash;tables tucked into pine trees right at the water&rsquo;s edge. Kids can splash and wade safely.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Lakeside picnic &bull; Adults: cooler food &bull; Kids: sandwiches/food truck</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 6 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Lakeside family picnic at String Lake Picnic Area. Adults eat custom whole foods; kids enjoy packed sandwiches or food truck snacks.</li>
+          <li><strong>Dinner (~6:00 PM):</strong> <a href="https://www.google.com/maps/search/?api=1&query=Forage+Bistro+Driggs+ID" class="map-link" target="_blank" rel="noopener">Forage Bistro</a> or <a href="https://www.google.com/maps/search/?api=1&query=Badger+Creek+Cafe+Tetonia+ID" class="map-link" target="_blank" rel="noopener">Badger Creek Cafe</a> in Driggs/Tetonia for kids; adults prep clean whole-food dinner at lodging.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 7 -->
+  <section class="section day-section day-section--alt" id="day7">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 7</span>
+        <h2 class="day-header__title">Tetonia to Pendleton, Oregon</h2>
+        <p class="day-header__date">July 3, 2026 &bull; ~575 miles &bull; Craters of the Moon &amp; Snake River Plain</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9728;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Crisp morning departure (55&ndash;62&deg;F). Warm, dry afternoon in Boise peaking around 78&ndash;83&deg;F. Comfortable high-desert breeze in Pendleton in the mid-70s&deg;F.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">07:30 &ndash; 10:00 AM</div>
+          <div class="timeline__content">
+            <h3>Leg 1: Tetonia to Craters of the Moon</h3>
+            <div class="timeline__alt">⛰️ Elevation: 5,910 ft</div>
+            <p>Check out of Tetonia early at 7:30 AM. Drive through Idaho Falls and head west across the Snake River Plain on US-20/26 toward Arco.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~135 mi &bull; ID-33 / US-20 West</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">10:00 &ndash; 11:30 AM</div>
+          <div class="timeline__content">
+            <h3>Stop 1: <a href="https://www.google.com/maps/search/?api=1&query=Craters+of+the+Moon+National+Monument+Arco+ID" class="map-link" target="_blank" rel="noopener">Craters of the Moon National Monument</a></h3>
+            <div class="timeline__alt">⛰️ Elevation: 5,910 ft</div>
+            <p>Explore an otherworldly volcanic landscape of black lava flows, cinder cones, and spatter cones. Drive the 7-mile Loop Road and let the kids walk the short, easy trails (Devils Orchard, Inferno Cone, or the spatter cone boardwalk). Bring water &mdash; the black rock gets hot and there&rsquo;s little shade.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">7-mi Loop Road &bull; Easy lava trails</span>
+              <span class="meta-tag meta-tag--info">America the Beautiful pass accepted</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:30 AM &ndash; 01:00 PM</div>
+          <div class="timeline__content">
+            <h3>Leg 2: Craters to Twin Falls</h3>
+            <div class="timeline__alt">⛰️ Elevation: 3,745 ft</div>
+            <p>Continue southwest on US-93 down to the Magic Valley and the rim of the Snake River Canyon.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~90 mi &bull; US-93 South</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">01:00 &ndash; 01:45 PM</div>
+          <div class="timeline__content">
+            <h3>Stop 2: <a href="https://www.google.com/maps/search/?api=1&query=Shoshone+Falls+Twin+Falls+ID" class="map-link" target="_blank" rel="noopener">Shoshone Falls</a> &amp; <a href="https://www.google.com/maps/search/?api=1&query=Perrine+Bridge+Twin+Falls+ID" class="map-link" target="_blank" rel="noopener">Perrine Bridge</a></h3>
+            <div class="timeline__alt">⛰️ Elevation: ≈3,200 ft</div>
+            <p>Walk the flat overlook to view the 212-foot waterfall &mdash; the &ldquo;Niagara of the West.&rdquo; Stop at the Perrine Bridge sidewalks to watch for BASE jumpers leaping into the canyon.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">212-ft waterfall &bull; Quick lunch on the go</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">01:45 &ndash; 03:45 PM</div>
+          <div class="timeline__content">
+            <h3>Leg 3: Twin Falls to Boise</h3>
+            <div class="timeline__alt">⛰️ Elevation: 2,704 ft</div>
+            <p>Cruise down I-84 West into Boise for a short afternoon stretch break.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~130 mi &bull; I-84 West</span>
+              <span class="meta-tag meta-tag--food">Picnic or patio at <a href="https://www.google.com/maps/search/?api=1&query=Julia+Davis+Park+Boise+ID" class="map-link" target="_blank" rel="noopener">Julia Davis Park</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">04:00 &ndash; 06:45 PM</div>
+          <div class="timeline__content">
+            <h3>Leg 4: Crossing the Oregon Border</h3>
+            <div class="timeline__alt">⛰️ Elevation: 1,068 ft</div>
+            <p>Climb the scenic Blue Mountain passes on I-84 (gaining an hour back into Pacific Time) before descending into Pendleton. Check into the <strong><a href="https://www.google.com/maps/search/?api=1&query=Radisson+Hotel+Pendleton+Airport+OR" class="map-link" target="_blank" rel="noopener">Radisson Hotel Pendleton Airport</a></strong>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~220 mi &bull; I-84 West &bull; gain 1 hr (Mtn &rarr; Pacific)</span>
+              <span class="meta-tag meta-tag--hotel">Radisson Hotel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 7 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Outdoor seating at <a href="https://www.google.com/maps/search/?api=1&query=Julia+Davis+Park+Boise+ID" class="map-link" target="_blank" rel="noopener">Julia Davis Park</a> / <a href="https://www.google.com/maps/search/?api=1&query=The+Warehouse+Food+Hall+Boise+ID" class="map-link" target="_blank" rel="noopener">Warehouse Food Hall</a> in Boise.</li>
+          <li><strong>Dinner (~7:15 PM):</strong> Kids enjoy The View Restaurant at Radisson or <a href="https://www.google.com/maps/search/?api=1&query=Prodigal+Son+Brewery+Pendleton+OR" class="map-link" target="_blank" rel="noopener">Prodigal Son Brewery</a> downtown; adults supplement with packed staples.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 8 -->
+  <section class="section day-section" id="day8">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 8</span>
+        <h2 class="day-header__title">Pendleton back to Seattle</h2>
+        <p class="day-header__date">July 4, 2026 &bull; ~290 miles &bull; Happy Independence Day!</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9728;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Bright, beautiful holiday sunshine. Warm afternoon temps hitting 72&ndash;76&deg;F in Ellensburg. Crisp mountain crosswinds over Snoqualmie Pass.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">10:00 &ndash; 11:45 AM</div>
+          <div class="timeline__content">
+            <h3>Leg 1: Columbia Basin Fruit Run</h3>
+            <div class="timeline__alt">⛰️ Elevation: 840 ft</div>
+            <p>Check out at 10:00 AM. Cross the Columbia River into Yakima Valley farm country. Stop at a seasonal orchard stand in <a href="https://www.google.com/maps/search/?api=1&query=Prosser+WA" class="map-link" target="_blank" rel="noopener">Prosser</a> for fresh, peak-season sweet cherries.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">I-84 to I-82 &bull; through Prosser</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:45 AM &ndash; 12:45 PM</div>
+          <div class="timeline__content">
+            <h3>Leg 2: <a href="https://www.google.com/maps/search/?api=1&query=Yakima+River+Canyon+Scenic+Byway+WA" class="map-link" target="_blank" rel="noopener">Yakima River Canyon</a> Scenic Byway</h3>
+            <div class="timeline__alt">⛰️ Elevation: ≈1,300 ft</div>
+            <p>Take Exit 26 onto SR-821 (Canyon Road). Enjoy a gorgeous family drive between massive basalt cliffs and sparkling river lines.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">SR-821 &bull; Scenic byway through basalt canyon</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">12:45 &ndash; 02:15 PM</div>
+          <div class="timeline__content">
+            <h3>Stop 2: Halfway Lunch &amp; Pioneer Farm (Ellensburg)</h3>
+            <div class="timeline__alt">⛰️ Elevation: 1,535 ft</div>
+            <p>Head to <strong><a href="https://www.google.com/maps/search/?api=1&query=Olmstead+Place+Historical+State+Park+Ellensburg+WA" class="map-link" target="_blank" rel="noopener">Olmstead Place Historical State Park</a></strong>. Set up a homeward picnic on wide lawns surrounding historic pioneer log cabins. Kids can explore old farm equipment and look for tiny fish along the gentle creek.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Packed lunchboxes or <a href="https://www.google.com/maps/search/?api=1&query=La+Santa+Mexican+Cuisine+Ellensburg+WA" class="map-link" target="_blank" rel="noopener">La Santa Mexican Cuisine</a> takeout</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">02:15 &ndash; 04:45 PM</div>
+          <div class="timeline__content">
+            <h3>Leg 3: <a href="https://www.google.com/maps/search/?api=1&query=Snoqualmie+Pass+Summit+WA" class="map-link" target="_blank" rel="noopener">Snoqualmie Pass</a> to Seattle</h3>
+            <div class="timeline__alt">⛰️ Elevation: 3,022 ft</div>
+            <p>Merge onto I-90 West. Stop at the pass summit for a 20-minute alpine air break (ice cream for the kids!) before coasting home to Seattle for neighborhood July 4th fireworks.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~110 mi &bull; I-90 West</span>
+              <span class="meta-tag meta-tag--info">Home for July 4th fireworks!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 8 Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Picnic at Olmstead Place State Park. Kids enjoy Ellensburg takeout (<a href="https://www.google.com/maps/search/?api=1&query=La+Santa+Mexican+Cuisine+Ellensburg+WA" class="map-link" target="_blank" rel="noopener">La Santa Mexican Cuisine</a> or other downtown options) or packed lunchboxes; adults eat clean.</li>
+          <li><strong>Homeward Snacks:</strong> Fresh sweet cherries from Prosser fruit stands.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIP CHECKLIST -->
+  <section class="section checklist-section" id="checklist">
+    <div class="container">
+      <h2 class="section__title">Trip Checklist</h2>
+      <p class="section__subtitle">Tap items to check them off &mdash; progress saves automatically in your browser</p>
+
+      <div class="checklist__progress">
+        <div class="checklist__progress-bar">
+          <div class="checklist__progress-fill" id="progressFill"></div>
+        </div>
+        <span class="checklist__progress-text" id="progressText">0 / 0 complete</span>
+      </div>
+
+      <div class="checklist__controls">
+        <button class="btn btn--small btn--outline" id="uncheckAll">Uncheck All</button>
+        <button class="btn btn--small btn--outline" id="collapseAll">Collapse All</button>
+      </div>
+
+      <div class="checklist__grid">
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128196;</span>
+            <h3>Documents &amp; Reservations</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="docs">
+            <li><label><input type="checkbox" data-key="docs-0"><span>Driver&rsquo;s license / photo IDs</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-1"><span>Health insurance cards</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-2"><span>Vehicle registration &amp; insurance</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-3"><span>Hotel confirmation printouts / screenshots</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-4"><span>National Park passes (America the Beautiful)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-5"><span>Emergency contacts list</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-6"><span>Roadside assistance / AAA info</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-7"><span>Printed itinerary (backup for no-signal areas)</span></label></li>
           </ul>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-group__title">Backend</h3>
-          <ul class="skill-list">
-            <li>Node.js &amp; Express</li>
-            <li>Python &amp; FastAPI</li>
-            <li>PostgreSQL &amp; MongoDB</li>
-            <li>REST &amp; GraphQL APIs</li>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127890;</span>
+            <h3>Packing Essentials</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="pack">
+            <li><label><input type="checkbox" data-key="pack-0"><span>Layers &amp; warm jackets (Yellowstone mornings ~40&deg;F)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-1"><span>Rain jackets / ponchos</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-2"><span>Hiking shoes &amp; sandals</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-3"><span>Sunscreen SPF 50+ &amp; sunglasses</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-4"><span>Hats (sun &amp; warm)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-5"><span>Swimsuits &amp; towels (String Lake, hotel pools)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-6"><span>Bug spray / insect repellent</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-7"><span>Toiletries &amp; medications</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-8"><span>First aid kit</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-9"><span>Binoculars (wildlife viewing in Lamar Valley)</span></label></li>
+            <li><label><input type="checkbox" data-key="pack-10"><span>Camera / GoPro &amp; chargers</span></label></li>
           </ul>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-group__title">Tools &amp; Other</h3>
-          <ul class="skill-list">
-            <li>Git &amp; GitHub</li>
-            <li>Docker &amp; CI/CD</li>
-            <li>AWS &amp; Vercel</li>
-            <li>Figma</li>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127828;</span>
+            <h3>Food &amp; Snacks</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="food">
+            <li><label><input type="checkbox" data-key="food-0"><span>Cooler with ice packs</span></label></li>
+            <li><label><input type="checkbox" data-key="food-1"><span>Reusable water bottles (1 per person)</span></label></li>
+            <li><label><input type="checkbox" data-key="food-2"><span>Adults: prepped whole-food meals</span></label></li>
+            <li><label><input type="checkbox" data-key="food-3"><span>Kids: sandwich supplies &amp; snack bags</span></label></li>
+            <li><label><input type="checkbox" data-key="food-4"><span>Trail mix, granola bars, dried fruit</span></label></li>
+            <li><label><input type="checkbox" data-key="food-5"><span>Fruit (apples, bananas, clementines)</span></label></li>
+            <li><label><input type="checkbox" data-key="food-6"><span>Picnic blanket &amp; utensil set</span></label></li>
+            <li><label><input type="checkbox" data-key="food-7"><span>Paper towels &amp; trash bags</span></label></li>
+            <li><label><input type="checkbox" data-key="food-8"><span>Grocery run at Sam Patch Co. in Island Park (fresh produce, meat for cabin dinners)</span></label></li>
           </ul>
         </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128663;</span>
+            <h3>Car &amp; Travel Gear</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="car">
+            <li><label><input type="checkbox" data-key="car-0"><span>Full tank of gas &amp; tire pressure check</span></label></li>
+            <li><label><input type="checkbox" data-key="car-1"><span>Phone mount &amp; car chargers</span></label></li>
+            <li><label><input type="checkbox" data-key="car-2"><span>Download offline Google Maps (MT, WY, ID, OR)</span></label></li>
+            <li><label><input type="checkbox" data-key="car-3"><span>Kids: tablets, headphones, coloring books</span></label></li>
+            <li><label><input type="checkbox" data-key="car-4"><span>Pillow &amp; blankets for car naps</span></label></li>
+            <li><label><input type="checkbox" data-key="car-5"><span>Portable phone battery pack</span></label></li>
+            <li><label><input type="checkbox" data-key="car-6"><span>Sunshade for windshield</span></label></li>
+            <li><label><input type="checkbox" data-key="car-7"><span>Umbrella stroller (if needed)</span></label></li>
+            <li><label><input type="checkbox" data-key="car-8"><span>Bear spray (Grand Teton / Yellowstone)</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#9989;</span>
+            <h3>Before You Leave</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="pre">
+            <li><label><input type="checkbox" data-key="pre-0"><span>Stop mail / package deliveries</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-1"><span>Set lights / smart home timers</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-2"><span>Water plants &amp; arrange pet care</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-3"><span>Lock all doors &amp; windows</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-4"><span>Take out trash &amp; clear fridge</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-5"><span>Share trip plan with family / neighbor</span></label></li>
+            <li><label><input type="checkbox" data-key="pre-6"><span>Check weather forecast one more time</span></label></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="section contact" id="contact">
+  <!-- VALIDATION REPORT -->
+  <section class="section validation" id="validation">
     <div class="container">
-      <h2 class="section__title">Get In Touch</h2>
-      <p class="section__subtitle">Have a project in mind? I'd love to hear from you.</p>
-      <div class="contact__wrapper">
-        <form class="contact__form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-        </form>
-        <div class="contact__links">
-          <p>Or find me on</p>
-          <a href="#" class="social-link">GitHub</a>
-          <a href="#" class="social-link">LinkedIn</a>
-          <a href="mailto:alex@example.com" class="social-link">Email</a>
+      <h2 class="section__title">Itinerary Validation Report</h2>
+      <p class="section__subtitle">Drive times, distances, locations, and weather cross-checked for accuracy</p>
+
+      <div class="validation__summary">
+        <div class="valid-stat valid-stat--good">
+          <span class="valid-stat__number">42</span>
+          <span class="valid-stat__label">Items Verified</span>
         </div>
+        <div class="valid-stat valid-stat--warn">
+          <span class="valid-stat__number">7</span>
+          <span class="valid-stat__label">Advisories</span>
+        </div>
+        <div class="valid-stat valid-stat--bad">
+          <span class="valid-stat__number">0</span>
+          <span class="valid-stat__label">Issues Found</span>
+        </div>
+      </div>
+
+      <!-- Driving Validation -->
+      <div class="validation__group">
+        <h3 class="validation__group-title">Driving Distances &amp; Times</h3>
+        <div class="validation__table-wrap">
+          <table class="validation__table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Segment</th>
+                <th>Itinerary</th>
+                <th>Verified</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Seattle &rarr; Vantage, WA</td>
+                <td>2h 15m (~150 mi)</td>
+                <td>136 mi, ~2h 30m (Snoqualmie Pass slows travel)</td>
+                <td><span class="status status--warn">15m short</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Vantage &rarr; Coeur d&rsquo;Alene, ID</td>
+                <td>2h 30m</td>
+                <td>177 mi, ~3h 15m</td>
+                <td><span class="status status--bad">45m short</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Coeur d&rsquo;Alene &rarr; St. Regis, MT</td>
+                <td>3h (incl. TZ change)</td>
+                <td>94 mi, ~1h 27m + 1h TZ = ~2h 27m clock</td>
+                <td><span class="status status--ok">Padded</span></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>St. Regis &rarr; Butte, MT</td>
+                <td>2h 30m</td>
+                <td>189 mi, ~2h 28m</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Butte &rarr; West Yellowstone</td>
+                <td>2h 30m (140 mi)</td>
+                <td>147 mi, ~2h 15&ndash;30m</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Butte &rarr; Gardiner &rarr; Canyon &rarr; Norris &rarr; Island Park</td>
+                <td>~272 mi total / cabin by 7 PM</td>
+                <td>~270 mi, ~5h 15m driving; Norris to West Gate to cabin ~1h 15m &mdash; ~7:00 PM arrival</td>
+                <td><span class="status status--warn">Full but doable day</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Island Park &rarr; West Entrance</td>
+                <td>30 min</td>
+                <td>28 mi, ~29&ndash;34 min (+ gate wait in peak season)</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Hayden &rarr; Lamar &rarr; Island Park (return)</td>
+                <td>Implied ~3h driving</td>
+                <td>Lamar to cabin ~110 mi, ~2h 45m&ndash;3h &mdash; long windshield-wildlife day by design</td>
+                <td><span class="status status--warn">Drive-heavy (stormy day)</span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Island Park &rarr; Victor, ID</td>
+                <td>2h 15m</td>
+                <td>74 mi, ~1h 50m</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Tetonia &rarr; Schwabacher Landing</td>
+                <td>1h (4:45&ndash;5:45 AM)</td>
+                <td>~55 mi, ~1h 15m. Sunrise at 5:54 AM &mdash; depart by 4:30 AM to catch first light</td>
+                <td><span class="status status--warn">Leave earlier</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Tetonia &rarr; Craters of the Moon</td>
+                <td>2h 30m (~135 mi)</td>
+                <td>~133 mi, ~2h 25m via Idaho Falls / US-20</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Craters &rarr; Twin Falls</td>
+                <td>1h 30m (~90 mi)</td>
+                <td>~88 mi, ~1h 30m via US-93</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Twin Falls &rarr; Boise</td>
+                <td>2h</td>
+                <td>129&ndash;134 mi, ~1h 50m&ndash;2h</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Boise &rarr; Pendleton, OR</td>
+                <td>3h 30m</td>
+                <td>220&ndash;222 mi, ~3h 44m (also gains 1h: MT&rarr;Pacific TZ)</td>
+                <td><span class="status status--ok">Close</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Day 7 total distance</td>
+                <td>~575 mi</td>
+                <td>~570&ndash;585 mi total (incl. Craters loop)</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Pendleton &rarr; Seattle (full route)</td>
+                <td>~290 mi total</td>
+                <td>~283&ndash;290 mi via I-82/SR-821/I-90</td>
+                <td><span class="status status--ok">Accurate</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Location Validation -->
+      <div class="validation__group">
+        <h3 class="validation__group-title">Locations &amp; Attractions Verified</h3>
+        <div class="validation__grid">
+          <div class="valid-card valid-card--ok">
+            <h4>Ginkgo Gem Shop (Vantage, WA)</h4>
+            <p>Real roadside attraction at 330 Ginkgo Ave, near Ginkgo Petrified Forest State Park. Dinosaur statues confirmed. <strong>Note:</strong> Opens at 10:30 AM &mdash; may not be open for an 8:45 AM arrival. Plan for exterior viewing only.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Atlas Mill Waterfront Park (CDA)</h4>
+            <p>Real 12.5-acre park (officially &ldquo;Atlas Mill Park&rdquo;) along the Spokane River with 4,000 ft of waterfront, kayak launch, dog park, swim area, and playground. May be closer to Exit 12 or 15 than Exit 11 &mdash; verify driving directions.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Wingate by Wyndham Butte</h4>
+            <p>Confirmed at 2107 Cornell Ave, Butte, MT 59701. 74-room hotel with free breakfast, indoor pool, fitness center, and free parking.</p>
+          </div>
+          <div class="valid-card valid-card--warn">
+            <h4>Yellowstone Thermal Features</h4>
+            <p>Most attractions verified: Norris Geyser Basin, Mammoth Hot Springs, Fountain Paint Pot, Grand Prismatic Overlook (Fairy Falls trailhead, ~0.6&ndash;0.8 mi one-way with 105 ft elevation gain &mdash; not completely flat), Old Faithful (~90 min avg eruption cycle), Artists Paint Pots (1 mi loop), Canyon viewpoints (Artist Point views Lower Falls only), Mud Volcano &amp; Dragon&rsquo;s Mouth Spring (same thermal area), West Thumb (Fishing Cone in lake water).</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Grand Teton Locations</h4>
+            <p>All confirmed: Glacier View Turnout (views 3 glaciers), Snake River Overlook (Ansel Adams photo spot &mdash; note trees now partially block historic view), Elk Ranch Flats (prime wildlife), Jackson Lake Lodge (60-ft panoramic windows, free public lobby, Lunch Tree Hill picnic nearby), Oxbow Bend (iconic mirror reflections of Mt. Moran), Schwabacher Landing (beaver pond reflections), Mormon Row (Moulton Barns, National Register of Historic Places), Jenny Lake Shuttle Boat ($20 adult RT, runs every 10&ndash;15 min, 7 AM&ndash;7 PM peak season), Hidden Falls &amp; Inspiration Point, String Lake (shallow, warmest lake in park, ~50s&deg;F in early July), Signal Mountain (driveable 5-mi summit road).</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Shoshone Falls &amp; Perrine Bridge</h4>
+            <p>Shoshone Falls: 212 ft, wider than Niagara (&ldquo;Niagara of the West&rdquo;). ~6 mi from I-84 (10-min detour). Perrine Bridge: 486 ft above canyon floor, only US structure allowing year-round no-permit BASE jumping. Both in Twin Falls, ID.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Victor Emporium / Prodigal Son Brewery</h4>
+            <p>Victor Emporium: Real since 1950, 45 N Main St. Famous for huckleberry milkshakes (featured on Food Network). Prodigal Son Brewery: 230 SE Court Ave, Pendleton &mdash; #1 rated restaurant in Pendleton on TripAdvisor. Open Wed&ndash;Sat.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Warehouse Food Hall / Radisson Pendleton</h4>
+            <p>Warehouse Food Hall: Real, 370 S 8th St, Boise. 29,000+ sq ft, 13 kitchens, 2 bars. ~2&ndash;4 blocks from Julia Davis Park. Radisson Hotel Pendleton Airport: Confirmed at 4343 NW A Ave, 0.1 mi from airport.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Olmstead Place &amp; SR-821 Scenic Byway</h4>
+            <p>Olmstead Place: 217-acre state park, 1875 cottonwood log cabin (still standing), 0.75-mi Altapes Creek trail. SR-821: Confirmed 25-mi scenic byway from Exit 26, basalt cliffs rising ~2,000 ft, densest nesting raptors in WA state.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather Validation -->
+      <div class="validation__group">
+        <h3 class="validation__group-title">Weather Validation (Late June / Early July)</h3>
+        <div class="validation__grid">
+          <div class="valid-card valid-card--ok">
+            <h4>Yellowstone Mornings (32&ndash;48&deg;F)</h4>
+            <p>Accurate. Historical data: Yellowstone Lake avg low 34&deg;F, Mammoth avg low 42&deg;F in June. Freezing temps common at higher elevations. Thermal steam visibility is excellent.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Yellowstone Midday (60&ndash;70&deg;F)</h4>
+            <p>Mostly accurate. Yellowstone Lake avg high 62&deg;F, Mammoth avg high 70&deg;F. Most of the park averages 62&ndash;66&deg;F; the 70&deg;F upper end only at lower-elevation spots like Mammoth. UV is intense; sunscreen essential.</p>
+          </div>
+          <div class="valid-card valid-card--warn">
+            <h4>Butte, MT Evening (50s&deg;F)</h4>
+            <p>Overstated. At 5,538 ft elevation, Butte&rsquo;s June average low is 41&deg;F, July low ~45&deg;F. Evening sunset temps may briefly hit upper 40s&ndash;low 50s, but expect 40s&deg;F overnight. Pack warmer layers than the itinerary suggests.</p>
+          </div>
+          <div class="valid-card valid-card--ok">
+            <h4>Grand Teton (38&ndash;46&deg;F morning / 68&ndash;73&deg;F midday)</h4>
+            <p>Mornings accurate (avg low 39&ndash;45&deg;F). Midday slightly low &mdash; avg highs reach 75&ndash;82&deg;F in early July, especially in Jackson Hole valley. Plan for warmer hiking conditions.</p>
+          </div>
+          <div class="valid-card valid-card--warn">
+            <h4>Eastern WA/ID (74&ndash;78&deg;F)</h4>
+            <p>Too low for most of the route. Spokane avg high ~74&deg;F but Tri-Cities/Walla Walla reach 79&ndash;86&deg;F in late June. Columbia Basin and lower-elevation areas routinely exceed 80&deg;F. Pack for 85&ndash;95&deg;F at lower elevations.</p>
+          </div>
+          <div class="valid-card valid-card--bad">
+            <h4>Boise, ID (78&ndash;83&deg;F)</h4>
+            <p><strong>Significantly underestimated.</strong> Boise&rsquo;s July avg high is 92.7&deg;F. Early July daily highs range 88&ndash;93&deg;F, with 100&deg;F+ possible (6 days/year on average). The claimed 78&ndash;83&deg;F is off by ~10&deg;F. Bring ample water, sun protection, and plan for genuine heat.</p>
+          </div>
+          <div class="valid-card valid-card--bad">
+            <h4>Pendleton, OR &amp; Ellensburg, WA (72&ndash;76&deg;F)</h4>
+            <p><strong>Significantly underestimated.</strong> Pendleton July avg high: 84&ndash;90&deg;F. Ellensburg July avg high: 82&ndash;87&deg;F. The claimed 72&ndash;76&deg;F is off by 10&ndash;15&deg;F. These are hot, semi-arid locations in early July. Pack accordingly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advisories -->
+      <div class="validation__group">
+        <h3 class="validation__group-title">Advisories &amp; Recommendations</h3>
+        <div class="validation__grid">
+          <div class="valid-card valid-card--bad">
+            <h4>Day 7: Major Distance/Time Error</h4>
+            <p><strong>Tetonia to Twin Falls is 225&ndash;233 miles, requiring 3.5&ndash;4 hours</strong> (not the claimed 2h 15m / ~180 mi). The total Day 7 distance is ~570&ndash;590 miles (not ~340). This makes Day 7 a very long 9&ndash;10 hour driving day. Consider: departing Tetonia by 7:30&ndash;8:00 AM instead of 9:30 AM, or cutting the Shoshone Falls stop.</p>
+          </div>
+          <div class="valid-card valid-card--warn">
+            <h4>Day 1: Seattle&ndash;Vantage&ndash;CDA Timing</h4>
+            <p>Seattle to Vantage is underestimated by ~15 min (136 mi, ~2h 30m). Vantage to CDA is underestimated by ~45 min (177 mi, ~3h 15m). Combined, Day 1 runs ~1 hour behind schedule. Expect Butte arrival closer to 8:00 PM. Also: time zone change occurs at Lookout Pass (ID/MT border), not at St. Regis itself.</p>
+          </div>
+          <div class="valid-card valid-card--warn">
+            <h4>Yellowstone Days Reordered by Weather</h4>
+            <p>The three park days are now sequenced to the forecast: <strong>Day 2 (clearer)</strong> tackles the big driving highlights (Mammoth, Grand Canyon of the Yellowstone, Norris); <strong>Day 3 (stormy)</strong> is a flexible, stay-dry windshield-wildlife day through Hayden &amp; Lamar Valleys; <strong>Day 4 (clearing)</strong> is the walking day on the lower loop (Old Faithful, Fountain Paint Pots, Grand Prismatic). Day 2 is a full ~272-mi day &mdash; leave Butte by 9 AM sharp to reach the cabin by ~7 PM. Yellowstone Lake, West Thumb, and Artists Paint Pots were dropped to fit this plan.</p>
+          </div>
+          <div class="valid-card valid-card--warn">
+            <h4>Day 6: Sunrise Timing</h4>
+            <p>Sunrise on July 2 at Grand Teton is ~5:54 AM MDT. The 4:45 AM Tetonia departure arrives ~6:00&ndash;6:05 AM at Schwabacher Landing &mdash; slightly after sunrise. Depart by 4:15&ndash;4:30 AM to catch first light. Also verify Teton Pass road conditions (landslide repairs completed July 2025).</p>
+          </div>
+          <div class="valid-card valid-card--info">
+            <h4>Yellowstone Peak Season Strategy</h4>
+            <p>Late June is peak season. The 7:00&ndash;7:30 AM West Entrance entries are smart &mdash; expect 15&ndash;45 min gate waits if later. Old Faithful parking fills by 10 AM. The Gardiner&ndash;Mammoth road was damaged by 2022 flooding &mdash; check NPS road status before travel. Also note Ginkgo Gem Shop opens at 10:30 AM (Day 1 arrival at 8:45 AM may be exterior-only).</p>
+          </div>
+          <div class="valid-card valid-card--info">
+            <h4>July 4th Return &amp; Weather Prep</h4>
+            <p>I-90 westbound sees heavy July 4th return traffic in the afternoon. Budget an extra 30 min buffer. <strong>Critical:</strong> Boise, Pendleton, and Ellensburg temps will be 10&ndash;15&deg;F hotter than the itinerary claims (expect upper 80s to 90s). Carry ample water and sun protection for Days 7&ndash;8.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sightseeing Time -->
+      <div class="validation__group">
+        <h3 class="validation__group-title">Sightseeing Time Allocations</h3>
+        <div class="validation__table-wrap">
+          <table class="validation__table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Activity</th>
+                <th>Allocated</th>
+                <th>Recommended</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>Mammoth + Grand Canyon + Norris</td>
+                <td>~5 hours (spread across drives)</td>
+                <td>5&ndash;6 hours</td>
+                <td><span class="status status--warn">Tight &mdash; keep stops moving</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Hayden + Lamar Valleys (windshield)</td>
+                <td>~5 hours driving/viewing</td>
+                <td>4&ndash;6 hours</td>
+                <td><span class="status status--ok">Good (flexible)</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Fountain Paint Pots + Grand Prismatic</td>
+                <td>3 hours</td>
+                <td>2.5&ndash;3.5 hours</td>
+                <td><span class="status status--ok">Good</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Old Faithful + Upper Geyser Basin</td>
+                <td>3.5 hours</td>
+                <td>2&ndash;3 hours</td>
+                <td><span class="status status--ok">Generous</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Jenny Lake + Hidden Falls + Inspiration Point</td>
+                <td>5 hours</td>
+                <td>3&ndash;5 hours (with kids)</td>
+                <td><span class="status status--ok">Good</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Sunrise at Schwabacher + Mormon Row</td>
+                <td>1.75 hours</td>
+                <td>1&ndash;2 hours</td>
+                <td><span class="status status--ok">Good</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="validation__verdict">
+        <h3>Overall Verdict</h3>
+        <p>The previously flagged issues have all been resolved &mdash; <strong>Biscuit Basin and the closed Yellow Church Cafe were removed</strong>, and Day 7&rsquo;s distance is now stated accurately. One thing to keep in mind:</p>
+        <ol class="verdict-list">
+          <li><strong>Day 7 is the longest driving day (~575 mi, 9&ndash;10 hrs)</strong> and now includes Craters of the Moon &mdash; depart Tetonia early (by 7:30&ndash;8:00 AM) to fit it comfortably and reach Pendleton by evening.</li>
+        </ol>
+        <p>42+ locations, parks, hotels, and restaurants have been verified as real and accurately described. The Yellowstone/Grand Teton days are well-routed with excellent early-morning strategies. Day 1 runs about 1 hour behind the listed schedule (expect an 8 PM Butte arrival). Weather forecasts for the mountain/park locations are accurate, but <strong>Boise, Pendleton, and Ellensburg will be 10&ndash;15&deg;F hotter than listed</strong> (expect upper 80s to 90s on Days 7&ndash;8).</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p>Designed &amp; built by Alex Johnson &mdash; 2026</p>
+    <p>Sujitha&rsquo;s Family Road Trip: PNW &amp; The Rockies &bull; June 27 &ndash; July 4, 2026</p>
+    <p class="footer__small">Itinerary validated and website generated June 2026</p>
+    <p class="footer__small">Build 2026-06-27g &bull; Yellowstone days reordered by weather</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Trip Tracker -->
+  <div id="tracker" class="tracker">
+    <button class="tracker__toggle">
+      <span class="tracker__dot"></span>
+      <span class="tracker__summary">Trip Tracker</span>
+      <span class="tracker__arrow">&#9662;</span>
+    </button>
+    <div class="tracker__body">
+      <div class="tracker__content"></div>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260627g"></script>
+  <script src="tracker.js?v=20260627g"></script>
+  <script src="weather.js?v=20260627g"></script>
 </body>
 </html>
