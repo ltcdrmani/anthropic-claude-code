@@ -5,9 +5,9 @@
   // be there [startHour, endHour] for each day's weather bar.
   var DAYS = [
     { id: 'day1', date: '2026-06-27', lat: 46.0038, lng: -112.5348, place: 'Eastern WA → Butte', win: [7, 20] },
-    { id: 'day2', date: '2026-06-28', lat: 44.9686, lng: -110.6853, place: 'Yellowstone (Norris/Mammoth)', win: [11, 19] },
-    { id: 'day3', date: '2026-06-29', lat: 44.4605, lng: -110.8281, place: 'Old Faithful', win: [7, 19] },
-    { id: 'day4', date: '2026-06-30', lat: 44.7180, lng: -110.4950, place: 'Yellowstone Canyon', win: [7, 17] },
+    { id: 'day2', date: '2026-06-28', lat: 44.7203, lng: -110.4825, place: 'Mammoth / Canyon / Norris', win: [9, 19] },
+    { id: 'day3', date: '2026-06-29', lat: 44.6551, lng: -110.4586, place: 'Hayden & Lamar Valleys', win: [9, 20] },
+    { id: 'day4', date: '2026-06-30', lat: 44.4605, lng: -110.8281, place: 'Old Faithful / Lower Loop', win: [7, 16] },
     { id: 'day5', date: '2026-07-01', lat: 43.8558, lng: -110.6421, place: 'Grand Teton', win: [6, 22] },
     { id: 'day6', date: '2026-07-02', lat: 43.7529, lng: -110.7226, place: 'Jenny Lake (sunrise start)', win: [5, 16] },
     { id: 'day7', date: '2026-07-03', lat: 43.6150, lng: -116.2023, place: 'Craters → Boise', win: [8, 18] },
