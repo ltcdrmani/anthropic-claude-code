@@ -549,6 +549,31 @@ h3 .map-link:hover { color: var(--accent); }
 strong .map-link { color: inherit; font-weight: inherit; }
 strong .map-link:hover { color: var(--accent); }
 
+/* ERUPTION BOX */
+.eruption-box {
+  background: #fdf6ec;
+  border: 1px solid #f5e1c0;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 0.75rem 0;
+}
+.eruption-box h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 0.5rem;
+}
+.eruption-box p {
+  font-size: 0.86rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+.eruption-box p:last-child { margin-bottom: 0; }
+.eruption-box .content-list { margin: 0.25rem 0 0.5rem; }
+.eruption-box .content-list li { font-size: 0.85rem; }
+
 /* MEAL BOX */
 .meal-box {
   background: var(--bg);
