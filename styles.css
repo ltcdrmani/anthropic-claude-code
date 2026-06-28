@@ -497,6 +497,18 @@ ul, ol { padding-left: 1.25rem; }
   border-radius: 50%;
   background: var(--primary-light);
 }
+.timeline__alt {
+  display: inline-block;
+  margin: 0.1rem 0 0.4rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #6b4f2a;
+  background: #f3ecdf;
+  border: 1px solid #e4d6bd;
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+}
 .timeline__meta {
   display: flex;
   flex-wrap: wrap;
