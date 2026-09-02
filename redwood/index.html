@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redwood National &amp; State Parks &mdash; Family Long Weekend</title>
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
@@ -38,9 +38,9 @@
   <section class="hero" id="hero">
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__label">Family Long Weekend</p>
+      <p class="hero__label">Family Long Weekend 2026</p>
       <h1 class="hero__title">Redwood National &amp; State Parks</h1>
-      <p class="hero__subtitle">Thursday &ndash; Monday &bull; Seattle &rarr; Coos Bay &rarr; The Redwoods &rarr; Seattle</p>
+      <p class="hero__subtitle">September 3 &ndash; 7, 2026 &bull; Seattle &rarr; Coos Bay &rarr; The Redwoods &rarr; Seattle</p>
       <div class="hero__stats">
         <div class="stat">
           <span class="stat__number">~1,000</span>
@@ -118,7 +118,7 @@
       <div class="day-header">
         <span class="day-header__badge">Thu &amp; Fri</span>
         <h2 class="day-header__title">Staging &amp; Scenic Coast Drive</h2>
-        <p class="day-header__date">Seattle &rarr; Portland &rarr; Coos Bay, OR</p>
+        <p class="day-header__date">Sep 3 &ndash; 4, 2026 &bull; Seattle &rarr; Portland &rarr; Coos Bay, OR</p>
       </div>
 
       <div class="weather-bar">
@@ -169,7 +169,7 @@
       <div class="day-header">
         <span class="day-header__badge">Saturday</span>
         <h2 class="day-header__title">Southern Redwoods, Fern Canyon &amp; Klamath</h2>
-        <p class="day-header__date">Coos Bay &rarr; Prairie Creek Redwoods &rarr; Klamath &rarr; Crescent City</p>
+        <p class="day-header__date">Sep 5, 2026 &bull; Coos Bay &rarr; Prairie Creek &rarr; Klamath &rarr; Crescent City</p>
       </div>
 
       <div class="weather-bar weather-bar--cold">
@@ -261,7 +261,7 @@
       <div class="day-header">
         <span class="day-header__badge">Sunday</span>
         <h2 class="day-header__title">Jedediah Smith Giants, Smith River &amp; Coastal Views</h2>
-        <p class="day-header__date">Crescent City &bull; Howland Hill Road &bull; Smith River &bull; Coast</p>
+        <p class="day-header__date">Sep 6, 2026 &bull; Crescent City &bull; Howland Hill &bull; Smith River &bull; Coast</p>
       </div>
 
       <div class="weather-bar">
@@ -334,7 +334,7 @@
       <div class="day-header">
         <span class="day-header__badge">Monday</span>
         <h2 class="day-header__title">Return Drive to Seattle</h2>
-        <p class="day-header__date">Crescent City &rarr; Grants Pass &rarr; I-5 North &rarr; Seattle</p>
+        <p class="day-header__date">Sep 7, 2026 &bull; Crescent City &rarr; Grants Pass &rarr; I-5 North &rarr; Seattle</p>
       </div>
 
       <div class="weather-bar">
@@ -549,9 +549,23 @@
 
   <footer class="footer">
     <p>Redwood National &amp; State Parks &bull; Family Long Weekend Itinerary</p>
-    <p class="footer__small">Build 2026-r1 &bull; Fern Canyon &bull; Jedediah Smith &bull; Coastal Redwoods</p>
+    <p class="footer__small">Build 2026-r2 &bull; Sep 3&ndash;7, 2026 &bull; Live tracker + weather</p>
   </footer>
 
-  <script src="script.js?v=1"></script>
+  <!-- Trip Tracker -->
+  <div id="tracker" class="tracker">
+    <button class="tracker__toggle">
+      <span class="tracker__dot"></span>
+      <span class="tracker__summary">Trip Tracker</span>
+      <span class="tracker__arrow">&#9662;</span>
+    </button>
+    <div class="tracker__body">
+      <div class="tracker__content"></div>
+    </div>
+  </div>
+
+  <script src="script.js?v=2"></script>
+  <script src="tracker.js?v=2"></script>
+  <script src="weather.js?v=2"></script>
 </body>
 </html>
