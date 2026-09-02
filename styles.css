@@ -1139,6 +1139,48 @@ strong .map-link:hover { color: var(--accent); }
   line-height: 1.5;
 }
 
+/* TRIP PROGRESS (hero) */
+.trip-progress {
+  max-width: 340px;
+  margin: 0 auto 2rem;
+}
+.trip-progress__bar {
+  height: 8px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.55rem;
+}
+.trip-progress__bar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+.trip-progress__text {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.82);
+}
+.trip-progress__text a { color: #fff; font-weight: 600; text-decoration: underline; }
+
+/* TODAY highlight */
+.today-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  box-shadow: 0 0 0 3px rgba(39,174,96,0.18);
+}
+.day-section.is-today { box-shadow: inset 5px 0 0 var(--green); }
+
 /* INSTALL (PWA) BUTTON */
 .install-btn {
   position: fixed;

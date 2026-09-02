@@ -1139,8 +1139,63 @@ strong .map-link:hover { color: var(--accent); }
   line-height: 1.5;
 }
 
+/* TRIP PROGRESS (hero) */
+.trip-progress { max-width: 340px; margin: 0 auto 2rem; }
+.trip-progress__bar {
+  height: 8px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.55rem;
+}
+.trip-progress__bar span {
+  display: block; height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+.trip-progress__text { font-size: 0.85rem; color: rgba(255,255,255,0.82); }
+.trip-progress__text a { color: #fff; font-weight: 600; text-decoration: underline; }
+
+/* TODAY highlight */
+.today-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  box-shadow: 0 0 0 3px rgba(61,122,64,0.2);
+}
+.day-section.is-today { box-shadow: inset 5px 0 0 var(--green); }
+
+/* INSTALL (PWA) BUTTON */
+.install-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 250;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 100px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+  transition: transform var(--transition), background var(--transition);
+}
+.install-btn:hover { transform: translateY(-2px); background: var(--accent-dark); }
+
 @media print {
-  .nav, .tracker { display: none; }
+  .nav, .tracker, .install-btn { display: none; }
   .hero { min-height: auto; padding: 2rem; }
   .section { padding: 1.5rem 0; break-inside: avoid; }
   .timeline__item { break-inside: avoid; }

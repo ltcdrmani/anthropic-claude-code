@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redwood National &amp; State Parks &mdash; Family Long Weekend</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#2c5f2d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Redwoods" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
@@ -59,6 +66,7 @@
           <span class="stat__label">Travelers</span>
         </div>
       </div>
+      <div class="trip-progress" id="tripProgress" hidden></div>
       <a href="#overview" class="btn btn--primary">View Itinerary</a>
     </div>
   </section>
@@ -549,7 +557,7 @@
 
   <footer class="footer">
     <p>Redwood National &amp; State Parks &bull; Family Long Weekend Itinerary</p>
-    <p class="footer__small">Build 2026-r2 &bull; Sep 3&ndash;7, 2026 &bull; Live tracker + weather</p>
+    <p class="footer__small">Build 2026-r3 &bull; Installable, offline-ready &bull; Today auto-focus</p>
   </footer>
 
   <!-- Trip Tracker -->
@@ -564,8 +572,30 @@
     </div>
   </div>
 
-  <script src="script.js?v=2"></script>
-  <script src="tracker.js?v=2"></script>
-  <script src="weather.js?v=2"></script>
+  <button id="installBtn" class="install-btn" hidden>&#11015;&#65039; Install app</button>
+
+  <script src="script.js?v=3"></script>
+  <script src="tracker.js?v=3"></script>
+  <script src="weather.js?v=3"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+    (function () {
+      var deferred = null;
+      var btn = document.getElementById('installBtn');
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault(); deferred = e; if (btn) btn.hidden = false;
+      });
+      if (btn) btn.addEventListener('click', function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.finally(function () { deferred = null; btn.hidden = true; });
+      });
+      window.addEventListener('appinstalled', function () { if (btn) btn.hidden = true; });
+    })();
+  </script>
 </body>
 </html>

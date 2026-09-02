@@ -149,3 +149,68 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
     this.textContent = allCollapsed ? 'Collapse All' : 'Expand All';
   });
 })();
+
+/* TODAY AUTO-FOCUS & TRIP PROGRESS */
+(function () {
+  var DAYS = [
+    { id: 'day1', date: '2026-06-27', label: 'Jun 27' },
+    { id: 'day2', date: '2026-06-28', label: 'Jun 28' },
+    { id: 'day3', date: '2026-06-29', label: 'Jun 29' },
+    { id: 'day4', date: '2026-06-30', label: 'Jun 30' },
+    { id: 'day5', date: '2026-07-01', label: 'Jul 1' },
+    { id: 'day6', date: '2026-07-02', label: 'Jul 2' },
+    { id: 'day7', date: '2026-07-03', label: 'Jul 3' },
+    { id: 'day8', date: '2026-07-04', label: 'Jul 4' }
+  ];
+  var N = DAYS.length;
+  var prog = document.getElementById('tripProgress');
+
+  function localDateStr(d) {
+    return d.getFullYear() + '-' +
+      String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
+  }
+  var today = localDateStr(new Date());
+  var idx = -1;
+  for (var i = 0; i < N; i++) { if (DAYS[i].date === today) { idx = i; break; } }
+
+  function daysUntil(dateStr) {
+    return Math.round((new Date(dateStr + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
+  }
+
+  if (idx >= 0) {
+    var pct = Math.round(((idx + 1) / N) * 100);
+    if (prog) {
+      prog.hidden = false;
+      prog.innerHTML =
+        '<div class="trip-progress__bar"><span style="width:' + pct + '%"></span></div>' +
+        '<p class="trip-progress__text">Day ' + (idx + 1) + ' of ' + N + ' • ' + DAYS[idx].label +
+        ' — <a href="#' + DAYS[idx].id + '">jump to today ↓</a></p>';
+    }
+    var sec = document.getElementById(DAYS[idx].id);
+    if (sec) {
+      sec.classList.add('is-today');
+      var badgeEl = sec.querySelector('.day-header__badge');
+      if (badgeEl && !sec.querySelector('.today-badge')) {
+        var tb = document.createElement('span');
+        tb.className = 'today-badge';
+        tb.textContent = 'Today';
+        badgeEl.insertAdjacentElement('afterend', tb);
+      }
+      if (!location.hash) {
+        setTimeout(function () {
+          window.scrollTo({ top: sec.offsetTop - 76, behavior: 'smooth' });
+        }, 500);
+      }
+    }
+  } else if (prog) {
+    var startDelta = daysUntil(DAYS[0].date);
+    prog.hidden = false;
+    if (startDelta > 0) {
+      prog.innerHTML = '<p class="trip-progress__text">Trip starts ' + DAYS[0].label +
+        ' • ' + startDelta + ' day' + (startDelta > 1 ? 's' : '') + ' to go</p>';
+    } else {
+      prog.innerHTML = '<p class="trip-progress__text">Trip complete — hope it was amazing!</p>';
+    }
+  }
+})();
