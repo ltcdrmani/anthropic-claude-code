@@ -1139,8 +1139,28 @@ strong .map-link:hover { color: var(--accent); }
   line-height: 1.5;
 }
 
+/* INSTALL (PWA) BUTTON */
+.install-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 250;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 100px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+  transition: transform var(--transition), background var(--transition);
+}
+.install-btn:hover { transform: translateY(-2px); background: var(--accent-dark); }
+
 @media print {
-  .nav, .tracker { display: none; }
+  .nav, .tracker, .install-btn { display: none; }
   .hero { min-height: auto; padding: 2rem; }
   .section { padding: 1.5rem 0; break-inside: avoid; }
   .timeline__item { break-inside: avoid; }

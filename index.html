@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sujitha's Family Road Trip: PNW &amp; The Rockies</title>
-  <link rel="stylesheet" href="styles.css?v=20260627g" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1a5276" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="PNW Rockies" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css?v=20260627h" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
@@ -113,7 +120,7 @@
         </div>
       </div>
       <figure class="route-map">
-        <img src="route-map.png?v=20260627g" alt="Map of the full 8-day PNW &amp; Rockies road trip route, color-coded by day with city and state labels" loading="lazy" />
+        <img src="route-map.png?v=20260627h" alt="Map of the full 8-day PNW &amp; Rockies road trip route, color-coded by day with city and state labels" loading="lazy" />
         <figcaption>The full loop, color-coded by day &mdash; Seattle out through Yellowstone &amp; Grand Teton, returning via Craters of the Moon and the Columbia Basin.</figcaption>
       </figure>
     </div>
@@ -1274,7 +1281,7 @@
   <footer class="footer">
     <p>Sujitha&rsquo;s Family Road Trip: PNW &amp; The Rockies &bull; June 27 &ndash; July 4, 2026</p>
     <p class="footer__small">Itinerary validated and website generated June 2026</p>
-    <p class="footer__small">Build 2026-06-27g &bull; Yellowstone days reordered by weather</p>
+    <p class="footer__small">Build 2026-06-27h &bull; Installable &amp; works offline in the parks</p>
   </footer>
 
   <!-- Trip Tracker -->
@@ -1289,8 +1296,36 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260627g"></script>
-  <script src="tracker.js?v=20260627g"></script>
-  <script src="weather.js?v=20260627g"></script>
+  <button id="installBtn" class="install-btn" hidden>&#11015;&#65039; Install app</button>
+
+  <script src="script.js?v=20260627h"></script>
+  <script src="tracker.js?v=20260627h"></script>
+  <script src="weather.js?v=20260627h"></script>
+  <script>
+    // Register the service worker for full offline use in no-signal areas.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+    // "Install app" button (Android / desktop Chrome fire beforeinstallprompt).
+    (function () {
+      var deferred = null;
+      var btn = document.getElementById('installBtn');
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferred = e;
+        if (btn) btn.hidden = false;
+      });
+      if (btn) {
+        btn.addEventListener('click', function () {
+          if (!deferred) return;
+          deferred.prompt();
+          deferred.userChoice.finally(function () { deferred = null; btn.hidden = true; });
+        });
+      }
+      window.addEventListener('appinstalled', function () { if (btn) btn.hidden = true; });
+    })();
+  </script>
 </body>
 </html>
