@@ -1,5 +1,5 @@
 /* PNW & The Rockies — offline service worker */
-var CACHE = 'pnw-rockies-v1';
+var CACHE = 'pnw-rockies-v2';
 
 // Core app shell to precache (clean URLs; query strings ignored on match).
 var PRECACHE = [

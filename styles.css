@@ -1207,3 +1207,66 @@ strong .map-link:hover { color: var(--accent); }
   .section { padding: 1.5rem 0; break-inside: avoid; }
   .timeline__item { break-inside: avoid; }
 }
+
+/* ============ DARK MODE ============ */
+:root[data-theme="dark"] {
+  --primary: #4a90c2;
+  --primary-light: #5dade2;
+  --accent: #e88a3c;
+  --accent-dark: #cf7327;
+  --green: #2ecc71;
+  --green-light: #12301f;
+  --yellow: #e2ad3e;
+  --yellow-light: #2e2611;
+  --red: #ec6455;
+  --red-light: #361d1a;
+  --blue-light: #15212d;
+  --bg: #0f1720;
+  --bg-white: #18232f;
+  --text: #e6ecf2;
+  --text-muted: #9fb1c1;
+  --border: #2c3a47;
+  --border-light: #222d38;
+  --shadow: 0 2px 10px rgba(0,0,0,0.45);
+  --shadow-lg: 0 10px 34px rgba(0,0,0,0.55);
+}
+:root[data-theme="dark"] body { background: var(--bg); color: var(--text); }
+:root[data-theme="dark"] .section__title,
+:root[data-theme="dark"] .day-header__title,
+:root[data-theme="dark"] .overview__card h3,
+:root[data-theme="dark"] .route-summary h3,
+:root[data-theme="dark"] .validation__group-title,
+:root[data-theme="dark"] .validation__verdict h3 { color: #d6e4f2; }
+:root[data-theme="dark"] .weather-bar { background: #2a2510; border-color: #45391a; color: var(--text); }
+:root[data-theme="dark"] .weather-bar--cold { background: #16242f; border-color: #274056; }
+:root[data-theme="dark"] .eruption-box { background: #241d10; border-color: #45391a; }
+:root[data-theme="dark"] .eruption-box p { color: var(--text); }
+:root[data-theme="dark"] .timeline__alt { background: #2a2418; color: #d3bd97; border-color: #40371f; }
+:root[data-theme="dark"] .meta-tag--drive { background: #13293b; color: #8fc2e6; border-color: #1e3c54; }
+:root[data-theme="dark"] .meta-tag--sight { background: #2f2611; color: #e2b968; border-color: #45391a; }
+:root[data-theme="dark"] .meta-tag--food  { background: #12301f; color: #6fd39a; border-color: #1c4630; }
+:root[data-theme="dark"] .meta-tag--hotel { background: #271633; color: #c79be0; border-color: #3b2450; }
+:root[data-theme="dark"] .meta-tag--info  { background: #2f2611; color: #e2b968; border-color: #45391a; }
+:root[data-theme="dark"] .nav { background: rgba(10,20,28,0.95); }
+:root[data-theme="dark"] .route-map img { opacity: 0.94; }
+
+/* THEME TOGGLE BUTTON */
+.theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 250;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-white);
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform var(--transition);
+}
+.theme-toggle:hover { transform: translateY(-2px); }
+@media print { .theme-toggle { display: none; } }

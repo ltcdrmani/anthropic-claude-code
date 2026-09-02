@@ -214,3 +214,21 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
     }
   }
 })();
+
+/* THEME TOGGLE (dark mode) */
+(function () {
+  var KEY = 'theme';
+  var root = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  function paint() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (btn) btn.textContent = dark ? '☀️' : '🌙';
+  }
+  paint();
+  if (btn) btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    paint();
+  });
+})();

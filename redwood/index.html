@@ -11,7 +11,8 @@
   <meta name="apple-mobile-web-app-title" content="Redwoods" />
   <link rel="apple-touch-icon" href="icon-192.png" />
   <link rel="icon" type="image/png" href="icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <script>try{var t=localStorage.getItem('theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
@@ -557,7 +558,7 @@
 
   <footer class="footer">
     <p>Redwood National &amp; State Parks &bull; Family Long Weekend Itinerary</p>
-    <p class="footer__small">Build 2026-r3 &bull; Installable, offline-ready &bull; Today auto-focus</p>
+    <p class="footer__small">Build 2026-r4 &bull; Dark mode + installable + offline</p>
   </footer>
 
   <!-- Trip Tracker -->
@@ -573,10 +574,11 @@
   </div>
 
   <button id="installBtn" class="install-btn" hidden>&#11015;&#65039; Install app</button>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
 
-  <script src="script.js?v=3"></script>
-  <script src="tracker.js?v=3"></script>
-  <script src="weather.js?v=3"></script>
+  <script src="script.js?v=4"></script>
+  <script src="tracker.js?v=4"></script>
+  <script src="weather.js?v=4"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
