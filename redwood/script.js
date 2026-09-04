@@ -153,7 +153,7 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
 /* TODAY AUTO-FOCUS & TRIP PROGRESS */
 (function () {
   var DAYS = [
-    { id: 'day1', dates: ['2026-09-03', '2026-09-04'], label: 'Sep 3–4' },
+    { id: 'day1', dates: ['2026-09-04'], label: 'Sep 4' },
     { id: 'day2', dates: ['2026-09-05'], label: 'Sep 5' },
     { id: 'day3', dates: ['2026-09-06'], label: 'Sep 6' },
     { id: 'day4', dates: ['2026-09-07'], label: 'Sep 7' }
