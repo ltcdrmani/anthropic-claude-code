@@ -1,5 +1,5 @@
 /* Redwood National & State Parks — offline service worker */
-var CACHE = 'redwood-v3';
+var CACHE = 'redwood-v4';
 
 var PRECACHE = [
   './',

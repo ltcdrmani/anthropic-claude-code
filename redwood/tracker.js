@@ -10,8 +10,8 @@
     // Friday, Sep 4 — Seattle to Coos Bay via Portland
     {u:u(9,4,5,30),  lat:47.6062, lng:-122.3321, n:'Depart Seattle', d:1},
     {u:u(9,4,8,45),  lat:45.5152, lng:-122.6784, n:"Uttari's House, Portland", d:1},
-    {u:u(9,4,12,30), lat:45.5152, lng:-122.6784, n:'Depart Portland', d:1},
-    {u:u(9,4,17,0),  lat:43.3665, lng:-124.2179, n:'Coos Bay (overnight)', d:1},
+    {u:u(9,4,16,0),  lat:45.5152, lng:-122.6784, n:'Depart Portland', d:1},
+    {u:u(9,4,20,30), lat:43.3665, lng:-124.2179, n:'Coos Bay (overnight)', d:1},
 
     // Saturday, Sep 5 — Southern Redwoods, Fern Canyon & Klamath
     {u:u(9,5,7,30),  lat:43.3665, lng:-124.2179, n:'Depart Coos Bay', d:2},
