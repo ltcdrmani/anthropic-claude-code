@@ -13,15 +13,15 @@
     {u:u(9,4,16,0),  lat:45.5152, lng:-122.6784, n:'Depart Portland', d:1},
     {u:u(9,4,20,30), lat:43.3665, lng:-124.2179, n:'Coos Bay (overnight)', d:1},
 
-    // Saturday, Sep 5 — Southern Redwoods, Fern Canyon & Klamath
-    {u:u(9,5,7,30),  lat:43.3665, lng:-124.2179, n:'Depart Coos Bay', d:2},
-    {u:u(9,5,11,30), lat:41.4023, lng:-124.0645, n:'Fern Canyon & Gold Bluffs Beach', d:2},
-    {u:u(9,5,13,30), lat:41.4023, lng:-124.0645, n:'Depart Fern Canyon', d:2},
-    {u:u(9,5,14,0),  lat:41.3549, lng:-124.0264, n:'Big Tree & Drury Parkway', d:2},
-    {u:u(9,5,15,15), lat:41.3018, lng:-124.0165, n:'Lady Bird Johnson Grove', d:2},
-    {u:u(9,5,16,30), lat:41.5257, lng:-124.0384, n:'Klamath Tour-Thru Tree', d:2},
-    {u:u(9,5,17,0),  lat:41.5466, lng:-124.0793, n:'Klamath River Overlook', d:2},
-    {u:u(9,5,18,0),  lat:41.7558, lng:-124.2026, n:'Crescent City Airbnb', d:2},
+    // Saturday, Sep 5 — Southern Redwoods & Fern Canyon (after 5)
+    {u:u(9,5,10,0),  lat:43.3665, lng:-124.2179, n:'Depart Coos Bay', d:2},
+    {u:u(9,5,13,45), lat:41.3549, lng:-124.0264, n:'Big Tree & Drury Parkway', d:2},
+    {u:u(9,5,15,0),  lat:41.3018, lng:-124.0165, n:'Lady Bird Johnson Grove', d:2},
+    {u:u(9,5,16,15), lat:41.3018, lng:-124.0165, n:'Elk Meadow (pre-Fern Canyon)', d:2},
+    {u:u(9,5,17,15), lat:41.4023, lng:-124.0645, n:'Fern Canyon & Gold Bluffs Beach', d:2},
+    {u:u(9,5,18,45), lat:41.4023, lng:-124.0645, n:'Depart Fern Canyon', d:2},
+    {u:u(9,5,19,15), lat:41.5466, lng:-124.0793, n:'Klamath River Overlook', d:2},
+    {u:u(9,5,20,15), lat:41.7558, lng:-124.2026, n:'Crescent City Airbnb', d:2},
 
     // Sunday, Sep 6 — Jedediah Smith Giants, Smith River & Coast
     {u:u(9,6,9,0),   lat:41.7216, lng:-124.0846, n:'Grove of Titans', d:3},

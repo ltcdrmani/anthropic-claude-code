@@ -5,7 +5,7 @@
   // be there [startHour, endHour] for each day's weather bar.
   var DAYS = [
     { id: 'day1', date: '2026-09-04', lat: 43.3665, lng: -124.2179, place: 'Seattle → Portland → Coos Bay', win: [6, 21] },
-    { id: 'day2', date: '2026-09-05', lat: 41.4023, lng: -124.0645, place: 'Prairie Creek → Crescent City', win: [7, 18] },
+    { id: 'day2', date: '2026-09-05', lat: 41.4023, lng: -124.0645, place: 'Prairie Creek → Crescent City', win: [10, 20] },
     { id: 'day3', date: '2026-09-06', lat: 41.7558, lng: -124.1450, place: 'Jedediah Smith / Crescent City', win: [9, 17] },
     { id: 'day4', date: '2026-09-07', lat: 41.7558, lng: -124.2026, place: 'Crescent City → I-5 North', win: [7, 18] }
   ];
