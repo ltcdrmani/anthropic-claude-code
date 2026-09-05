@@ -1,0 +1,16 @@
+{
+  "name": "Redwood National & State Parks — Family Trip",
+  "short_name": "Redwoods",
+  "description": "Family long-weekend itinerary through Redwood National & State Parks — Fern Canyon, old-growth giants, live tracker, weather, and checklist.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#12280f",
+  "theme_color": "#2c5f2d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

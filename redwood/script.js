@@ -153,14 +153,10 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
 /* TODAY AUTO-FOCUS & TRIP PROGRESS */
 (function () {
   var DAYS = [
-    { id: 'day1', date: '2026-06-27', label: 'Jun 27' },
-    { id: 'day2', date: '2026-06-28', label: 'Jun 28' },
-    { id: 'day3', date: '2026-06-29', label: 'Jun 29' },
-    { id: 'day4', date: '2026-06-30', label: 'Jun 30' },
-    { id: 'day5', date: '2026-07-01', label: 'Jul 1' },
-    { id: 'day6', date: '2026-07-02', label: 'Jul 2' },
-    { id: 'day7', date: '2026-07-03', label: 'Jul 3' },
-    { id: 'day8', date: '2026-07-04', label: 'Jul 4' }
+    { id: 'day1', dates: ['2026-09-04'], label: 'Sep 4' },
+    { id: 'day2', dates: ['2026-09-05'], label: 'Sep 5' },
+    { id: 'day3', dates: ['2026-09-06'], label: 'Sep 6' },
+    { id: 'day4', dates: ['2026-09-07'], label: 'Sep 7' }
   ];
   var N = DAYS.length;
   var prog = document.getElementById('tripProgress');
@@ -172,7 +168,7 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
   }
   var today = localDateStr(new Date());
   var idx = -1;
-  for (var i = 0; i < N; i++) { if (DAYS[i].date === today) { idx = i; break; } }
+  for (var i = 0; i < N; i++) { if (DAYS[i].dates.indexOf(today) !== -1) { idx = i; break; } }
 
   function daysUntil(dateStr) {
     return Math.round((new Date(dateStr + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
@@ -204,7 +200,7 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
       }
     }
   } else if (prog) {
-    var startDelta = daysUntil(DAYS[0].date);
+    var startDelta = daysUntil(DAYS[0].dates[0]);
     prog.hidden = false;
     if (startDelta > 0) {
       prog.innerHTML = '<p class="trip-progress__text">Trip starts ' + DAYS[0].label +

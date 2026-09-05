@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redwood National &amp; State Parks &mdash; Family Long Weekend</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#2c5f2d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Redwoods" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <script>try{var t=localStorage.getItem('theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Redwood N&amp;SP</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#overview">Overview</a></li>
+        <li class="nav__dropdown">
+          <button class="nav__dropdown-btn" aria-expanded="false">Days <span class="nav__dropdown-arrow">&#9662;</span></button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="#day1">Fri &mdash; Seattle to Coos Bay</a></li>
+            <li><a href="#day2">Sat &mdash; Fern Canyon &amp; Klamath</a></li>
+            <li><a href="#day3">Sun &mdash; Jedediah Smith Giants</a></li>
+            <li><a href="#day4">Mon &mdash; Return to Seattle</a></li>
+          </ul>
+        </li>
+        <li><a href="#permit">Fern Canyon Permit</a></li>
+        <li><a href="#info">Weather &amp; Packing</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__label">Family Long Weekend 2026</p>
+      <h1 class="hero__title">Redwood National &amp; State Parks</h1>
+      <p class="hero__subtitle">September 4 &ndash; 7, 2026 &bull; Seattle &rarr; Coos Bay &rarr; The Redwoods &rarr; Seattle</p>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">~1,000</span>
+          <span class="stat__label">Total Miles</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">3</span>
+          <span class="stat__label">States</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">5</span>
+          <span class="stat__label">Days</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">7</span>
+          <span class="stat__label">Travelers</span>
+        </div>
+      </div>
+      <div class="trip-progress" id="tripProgress" hidden></div>
+      <a href="#overview" class="btn btn--primary">View Itinerary</a>
+    </div>
+  </section>
+
+  <section class="section overview" id="overview">
+    <div class="container">
+      <h2 class="section__title">Trip Overview</h2>
+      <p class="section__subtitle">A family long weekend among the world&rsquo;s tallest trees</p>
+      <div class="overview__grid">
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F46A;</div>
+          <h3>Travelers</h3>
+          <p>4 Adults &bull; 2 Kids (Sami &amp; Vihaan) &bull; 1 Infant (TinTin)</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F957;</div>
+          <h3>Dietary Focus</h3>
+          <p>Zero-oil whole-food vegan (self-carried) + outside dining for kids &amp; friends</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F332;</div>
+          <h3>Highlights</h3>
+          <p>Fern Canyon, old-growth giants, Roosevelt elk, drive-thru trees &amp; coastal vistas</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F3E8;</div>
+          <h3>Lodging</h3>
+          <p>Overnight in Coos Bay, Airbnb in Crescent City (day visit at Uttari&rsquo;s in Portland)</p>
+        </div>
+      </div>
+      <div class="route-summary">
+        <h3>Route at a Glance</h3>
+        <div class="route-stops">
+          <div class="route-stop"><span class="route-dot"></span><span>Seattle, WA</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Portland, OR</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Coos Bay, OR</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Prairie Creek Redwoods</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Klamath, CA</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Crescent City, CA</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Grants Pass, OR</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Seattle, WA</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 1: FRIDAY -->
+  <section class="section day-section day-section--alt" id="day1">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Friday</span>
+        <h2 class="day-header__title">Seattle to Coos Bay via Portland</h2>
+        <p class="day-header__date">Sep 4, 2026 &bull; 5:30 AM start &bull; Seattle &rarr; Portland &rarr; Coos Bay, OR</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#128663;</span>
+        <div>
+          <strong>Travel Note:</strong> An early 5:30 AM start gets you to Uttari&rsquo;s in Portland for a full daytime visit, then a 4:00 PM departure down the coast, reaching Coos Bay around 8:30 PM. Keep the cooler iced, prep car snacks and entertainment for the kids, and plan a stretch stop along the Umpqua River.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">05:30 &ndash; 08:45 AM</div>
+          <div class="timeline__content">
+            <h3>Early Drive to Uttari&rsquo;s (Portland)</h3>
+            <p>Depart Seattle at <strong>5:30 AM</strong> via <strong>I-5 South</strong> to <a href="https://www.google.com/maps/search/?api=1&query=Portland+OR" class="map-link" target="_blank" rel="noopener">Uttari&rsquo;s house in Portland</a> (~3&ndash;3.5 hrs). Beat the morning traffic and arrive in time for breakfast.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~175 mi &bull; I-5 South</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">08:45 AM &ndash; 4:00 PM</div>
+          <div class="timeline__content">
+            <h3>Day Visit at Uttari&rsquo;s (Portland)</h3>
+            <p>Rest, refuel, and spend the day with Uttari&rsquo;s family in Portland &mdash; breakfast and lunch together, kids stretch and play, and top off the cooler before the coastal leg.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Breakfast &amp; lunch at Uttari&rsquo;s &bull; restock cooler</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">4:00 &ndash; 8:30 PM</div>
+          <div class="timeline__content">
+            <h3>Portland to Coos Bay Drive</h3>
+            <p>Leave Portland at <strong>4:00 PM</strong>. Take <strong>I-5 South</strong> to <strong>OR-38 West</strong> (Drain/Reedsport) along the scenic <a href="https://www.google.com/maps/search/?api=1&query=Umpqua+River+Oregon" class="map-link" target="_blank" rel="noopener">Umpqua River</a> to <strong>US-101</strong> (~4&ndash;4.5 hrs). Arrive in <a href="https://www.google.com/maps/search/?api=1&query=Coos+Bay+OR" class="map-link" target="_blank" rel="noopener">Coos Bay</a> around ~<strong>8:30 PM</strong>, settle in, and rest for Saturday&rsquo;s redwoods.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~220 mi &bull; I-5 / OR-38 / US-101</span>
+              <span class="meta-tag meta-tag--hotel">Overnight: Coos Bay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Meal Strategy</h4>
+        <ul>
+          <li><strong>Breakfast &amp; lunch:</strong> With Uttari&rsquo;s family in Portland &mdash; reheat prepped zero-oil vegan meals; kids/friends eat as they like.</li>
+          <li><strong>Dinner:</strong> Cooler meals on the evening drive, or grab a late local takeout when you reach Coos Bay (~8:30 PM).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 2: SATURDAY -->
+  <section class="section day-section" id="day2">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Saturday</span>
+        <h2 class="day-header__title">Southern Redwoods &amp; Fern Canyon (after 5)</h2>
+        <p class="day-header__date">Sep 5, 2026 &bull; 10 AM start &bull; Coos Bay &rarr; Prairie Creek &rarr; Fern Canyon &rarr; Crescent City</p>
+      </div>
+
+      <div class="weather-bar weather-bar--cold">
+        <span class="weather-bar__icon">&#127788;&#65039;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Cool coastal morning with fog and canopy drip (50&ndash;54&deg;F), giving way to afternoon sun (62&ndash;68&deg;F). Fern Canyon stays damp and shaded all day &mdash; water shoes and dry spare socks are essential.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">10:00 AM &ndash; 1:30 PM</div>
+          <div class="timeline__content">
+            <h3>Scenic Coastal Drive South</h3>
+            <p>Check out of Coos Bay at 10:00 AM and drive <strong>US-101 South</strong>, past Crescent City into <a href="https://www.google.com/maps/search/?api=1&query=Prairie+Creek+Redwoods+State+Park" class="map-link" target="_blank" rel="noopener">Prairie Creek Redwoods</a> (~3.5 hrs). Arrive around 1:30 PM ready for the afternoon groves.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~150 mi &bull; US-101 South</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">1:45 &ndash; 2:45 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Newton+B+Drury+Scenic+Parkway" class="map-link" target="_blank" rel="noopener">Newton B. Drury Scenic Parkway</a> &amp; Big Tree</h3>
+            <p>A 10-mile parkway under an ancient canopy. Take the 5-minute paved stroll to the <a href="https://www.google.com/maps/search/?api=1&query=Big+Tree+Wayside+Prairie+Creek" class="map-link" target="_blank" rel="noopener">Big Tree Wayside</a>, and watch for grazing <strong>Roosevelt elk</strong> herds in <a href="https://www.google.com/maps/search/?api=1&query=Elk+Meadow+Prairie+Creek+Redwoods" class="map-link" target="_blank" rel="noopener">Elk Meadow</a>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Drive &amp; stroll &bull; Roosevelt elk</span>
+              <span class="meta-tag meta-tag--food">Picnic lunch among the groves</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">3:00 &ndash; 4:15 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Lady+Bird+Johnson+Grove" class="map-link" target="_blank" rel="noopener">Lady Bird Johnson Grove</a> Trail</h3>
+            <p>A <strong>1.5-mile peaceful loop</strong> over a footbridge along a misty upland ridge. Ample rest benches for the adults and for carrying TinTin.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Gentle loop &bull; Rest benches</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">4:15 &ndash; 5:00 PM</div>
+          <div class="timeline__content">
+            <h3>Ease Toward Gold Bluffs &amp; Elk Watching</h3>
+            <p>Drift back toward the Gold Bluffs Beach turnoff, letting the kids stretch and scanning <a href="https://www.google.com/maps/search/?api=1&query=Elk+Meadow+Prairie+Creek+Redwoods" class="map-link" target="_blank" rel="noopener">Elk Meadow</a> for Roosevelt elk while the last permit window (1&ndash;5 PM) closes. Get water shoes and headlamps ready.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--info">Prep for the after-5 Fern Canyon attempt</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">5:15 &ndash; 6:45 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Fern+Canyon+Prairie+Creek+Redwoods" class="map-link" target="_blank" rel="noopener">Fern Canyon</a> &amp; <a href="https://www.google.com/maps/search/?api=1&query=Gold+Bluffs+Beach" class="map-link" target="_blank" rel="noopener">Gold Bluffs Beach</a> &mdash; after 5</h3>
+            <p>The <strong>1.1-mile level loop</strong> through 50-ft fern-draped walls &mdash; footbridges and shallow streams for Sami &amp; Vihaan, TinTin in the carrier. <strong>Water shoes required!</strong></p>
+            <div class="eruption-box">
+              <h4>&#9888;&#65039; No reservation &mdash; you&rsquo;re trying the after-5 window</h4>
+              <p>The permit&rsquo;s last slot ends at <strong>5 PM</strong>, so this only works if the <strong>Gold Bluffs Beach kiosk is unstaffed</strong> &mdash; it&rsquo;s a gamble, not a guarantee. If it&rsquo;s still being checked, you&rsquo;ll be turned back after the drive down Davison Road (<strong>zero cell service</strong>). Go while there&rsquo;s light: the deep canyon darkens well before the ~7:45 PM sunset, so aim to be walking by ~5:30 and carry <strong>headlamps</strong>. Have a Plan B (below) in case you can&rsquo;t get in.</p>
+            </div>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Priority trail &bull; Kids&rsquo; favorite</span>
+              <span class="meta-tag meta-tag--info">Bring headlamps &bull; water shoes</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">6:45 &ndash; 8:15 PM</div>
+          <div class="timeline__content">
+            <h3>North to Crescent City (sunset at the coast)</h3>
+            <p>Head north on US-101 to <a href="https://www.google.com/maps/search/?api=1&query=Crescent+City+CA" class="map-link" target="_blank" rel="noopener">Crescent City</a>. If light allows, pull off at the <a href="https://www.google.com/maps/search/?api=1&query=Klamath+River+Overlook" class="map-link" target="_blank" rel="noopener">Klamath River Overlook</a> for a 650-ft cliff-top sunset over the ocean (~7:45 PM). Reheat vegan dinners at the Airbnb and unwind.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Klamath River Overlook &bull; ocean sunset</span>
+              <span class="meta-tag meta-tag--hotel">Airbnb: Crescent City (2 nights)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Saturday Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Afternoon picnic among the Prairie Creek groves (Big Tree / Elk Meadow) &mdash; unpack zero-oil prepped meals from the cooler.</li>
+          <li><strong>Dinner:</strong> Reheat vegan meals at the Crescent City Airbnb; local takeout for the kids and friends.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 3: SUNDAY -->
+  <section class="section day-section day-section--alt" id="day3">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Sunday</span>
+        <h2 class="day-header__title">Jedediah Smith Giants, Smith River &amp; Coastal Views</h2>
+        <p class="day-header__date">Sep 6, 2026 &bull; Crescent City &bull; Howland Hill &bull; Smith River &bull; Coast</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#9925;</span>
+        <div>
+          <strong>Weather Forecast:</strong> Classic coastal-redwood day &mdash; misty, cool morning in the deep old-growth (50s&deg;F), warming to comfortable afternoon sun (mid-60s&deg;F) out by the river and coast.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">9:00 &ndash; 11:30 AM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Howland+Hill+Road+Crescent+City" class="map-link" target="_blank" rel="noopener">Howland Hill Road</a> &amp; <a href="https://www.google.com/maps/search/?api=1&query=Grove+of+Titans+Jedediah+Smith" class="map-link" target="_blank" rel="noopener">Grove of Titans</a></h3>
+            <p>A winding <strong>dirt drive</strong> between towering redwoods. Hike the <strong>1.5-mile round trip</strong> along an elevated metal boardwalk through some of the largest old-growth trees on Earth. Baby carrier recommended &mdash; stairs are present.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Old-growth loop &bull; Dirt drive</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:45 AM &ndash; 1:00 PM</div>
+          <div class="timeline__content">
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Stout+Memorial+Grove+Jedediah+Smith" class="map-link" target="_blank" rel="noopener">Stout Memorial Grove</a> &amp; <a href="https://www.google.com/maps/search/?api=1&query=Smith+River+Jedediah+Smith+Redwoods" class="map-link" target="_blank" rel="noopener">Smith River</a></h3>
+            <p>A flat <strong>0.6-mile loop</strong> to the emerald banks of the Smith River. The perfect spot for a family picnic lunch, pebble-skipping for Sami &amp; Vihaan, and shaded rest.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Riverfront picnic &bull; Flat &amp; shaded</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">1:30 &ndash; 4:00 PM</div>
+          <div class="timeline__content">
+            <h3>Afternoon Family Choice</h3>
+            <p>Pick one relaxed afternoon adventure:</p>
+            <ul class="content-list">
+              <li><strong>Option A &mdash; <a href="https://www.google.com/maps/search/?api=1&query=Trees+of+Mystery+Klamath+CA" class="map-link" target="_blank" rel="noopener">Trees of Mystery</a> (Klamath):</strong> SkyTrail aerial gondola, canopy suspension bridges, and paved stroller-friendly paths.</li>
+              <li><strong>Option B &mdash; <a href="https://www.google.com/maps/search/?api=1&query=Battery+Point+Lighthouse+Crescent+City" class="map-link" target="_blank" rel="noopener">Battery Point Light</a> (Crescent City):</strong> A low-tide walk across the rocky causeway, tide-pooling, and ocean sea breeze.</li>
+            </ul>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Attraction / coast &bull; Check tide times for Option B</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">Evening</div>
+          <div class="timeline__content">
+            <h3>Crescent City Dinner &amp; Packing</h3>
+            <p>A relaxed evening in Crescent City. Reheat vegan dinners, pack up, and rest early ahead of Monday&rsquo;s long road trip back north.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--hotel">Final night: Crescent City Airbnb</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Sunday Meal Strategy</h4>
+        <ul>
+          <li><strong>Lunch:</strong> Riverfront family picnic at Stout Memorial Grove / Smith River.</li>
+          <li><strong>Dinner:</strong> Reheat vegan meals at the Airbnb; local takeout for the kids and friends.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 4: MONDAY -->
+  <section class="section day-section" id="day4">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Monday</span>
+        <h2 class="day-header__title">Return Drive to Seattle</h2>
+        <p class="day-header__date">Sep 7, 2026 &bull; Crescent City &rarr; Grants Pass &rarr; I-5 North &rarr; Seattle</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#128665;</span>
+        <div>
+          <strong>Travel Note:</strong> A long haul home &mdash; ~430 miles, roughly 8&ndash;9 hours with infant feeding, meals, and stretch breaks. Leave early, keep the cooler stocked, and plan a couple of playground/stretch stops through the Willamette Valley.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">7:30 &ndash; 8:00 AM</div>
+          <div class="timeline__content">
+            <h3>Departure North</h3>
+            <p>Take <strong>US-199 North</strong> through the Illinois Valley to <a href="https://www.google.com/maps/search/?api=1&query=Grants+Pass+OR" class="map-link" target="_blank" rel="noopener">Grants Pass, OR</a>, then join <strong>I-5 North</strong> home through Eugene and Portland.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~430 mi &bull; US-199 / I-5 North &bull; ~8&ndash;9 hrs</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">Along the Way</div>
+          <div class="timeline__content">
+            <h3>Suggested Stretch Stops</h3>
+            <p>Break up the drive through the Willamette Valley: <a href="https://www.google.com/maps/search/?api=1&query=Eugene+OR" class="map-link" target="_blank" rel="noopener">Eugene</a> for lunch and a playground, and <a href="https://www.google.com/maps/search/?api=1&query=Portland+OR" class="map-link" target="_blank" rel="noopener">Portland</a> for a final rest/feed before the last leg to Seattle.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--info">Infant feeding &amp; stretch breaks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Monday Meal Strategy</h4>
+        <ul>
+          <li><strong>On the road:</strong> Cooler meals for the adults; planned takeout stops in Eugene / Portland for the kids and friends.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FERN CANYON PERMIT -->
+  <section class="section day-section day-section--alt" id="permit">
+    <div class="container">
+      <h2 class="section__title">Fern Canyon Permit &amp; Entry Rules</h2>
+      <p class="section__subtitle">Book this before you go &mdash; it&rsquo;s mandatory in summer, and there&rsquo;s no signal on-site</p>
+
+      <div class="eruption-box">
+        <h4>&#9888;&#65039; Mandatory Vehicle Day-Use Reservation (May 15 &ndash; Sep 15)</h4>
+        <p>A vehicle day-use reservation is <strong>required to reach Fern Canyon / Gold Bluffs Beach</strong> in summer. Book it in advance &mdash; and download or screenshot the confirmation at home, because there is <strong>zero cellular service on Davison Road and the beach</strong>.</p>
+        <p><strong>How to book:</strong></p>
+        <ul class="content-list">
+          <li><strong>Portal:</strong> <a href="https://www.redwoodparksconservancy.org/fern-canyon" target="_blank" rel="noopener">redwoodparksconservancy.org/fern-canyon</a></li>
+          <li><strong>In advance:</strong> Book online immediately ($0 reservation fee) &mdash; choose a <strong>Saturday morning (9 AM&ndash;1 PM)</strong> or midday slot.</li>
+          <li><strong>Day-before release:</strong> Additional permits drop <strong>Friday at 9:00 AM PT</strong> if your date is sold out.</li>
+        </ul>
+        <p><strong>Kiosk fee:</strong> $12 cash/check collected at the Gold Bluffs Beach gate &mdash; <strong>waived</strong> with an America the Beautiful or CA State Parks pass.</p>
+        <p><strong>Critical tip:</strong> Screenshot the reservation confirmation before you leave the Airbnb &mdash; you won&rsquo;t have signal to pull it up at the gate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEATHER & PACKING -->
+  <section class="section" id="info">
+    <div class="container">
+      <h2 class="section__title">Weather &amp; Packing Essentials</h2>
+      <p class="section__subtitle">Coastal microclimates, wet trails, and gear for the little ones</p>
+
+      <div class="validation__grid">
+        <div class="valid-card valid-card--info">
+          <h4>&#127777;&#65039; Temperatures</h4>
+          <p>Daytime highs 62&ndash;68&deg;F; morning/coastal lows 50&ndash;54&deg;F. Pleasant, but never hot &mdash; plan for cool starts.</p>
+        </div>
+        <div class="valid-card valid-card--info">
+          <h4>&#127787;&#65039; Microclimates</h4>
+          <p>Morning coastal fog and canopy drip give way to afternoon sun. Dress in easily removable layers for everyone.</p>
+        </div>
+        <div class="valid-card valid-card--ok">
+          <h4>&#128095; Footwear</h4>
+          <p>Strapped water sandals or water shoes <strong>plus spare dry socks</strong> for Fern Canyon&rsquo;s stream crossings. Standard walking shoes for Sunday&rsquo;s groves.</p>
+        </div>
+        <div class="valid-card valid-card--ok">
+          <h4>&#128118; Baby Gear</h4>
+          <p>A front/backpack carrier for TinTin on all unpaved and boardwalk trails &mdash; strollers struggle on roots, stairs, and dirt roads.</p>
+        </div>
+        <div class="valid-card valid-card--warn">
+          <h4>&#129380; Zero-Oil Vegan Meals</h4>
+          <p>Keep prepared meals in a heavy-duty cooler with block ice or cold packs. Easy reheating at each Airbnb / overnight stop.</p>
+        </div>
+        <div class="valid-card valid-card--warn">
+          <h4>&#128246; No Signal Zones</h4>
+          <p>Zero cell service on Davison Road and Gold Bluffs Beach. Download offline maps and your Fern Canyon permit before you arrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="section checklist-section" id="checklist">
+    <div class="container">
+      <h2 class="section__title">Trip Checklist</h2>
+      <p class="section__subtitle">Tap items to check them off &mdash; progress saves automatically in your browser</p>
+
+      <div class="checklist__progress">
+        <div class="checklist__progress-bar">
+          <div class="checklist__progress-fill" id="progressFill"></div>
+        </div>
+        <span class="checklist__progress-text" id="progressText">0 / 0 complete</span>
+      </div>
+
+      <div class="checklist__controls">
+        <button class="btn btn--small btn--outline" id="uncheckAll">Uncheck All</button>
+        <button class="btn btn--small btn--outline" id="collapseAll">Collapse All</button>
+      </div>
+
+      <div class="checklist__grid">
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128196;</span>
+            <h3>Documents &amp; Reservations</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="docs">
+            <li><label><input type="checkbox" data-key="docs-0"><span>Fern Canyon vehicle reservation (screenshot offline!)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-1"><span>America the Beautiful / CA State Parks pass</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-2"><span>Airbnb confirmations (Coos Bay, Crescent City)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-3"><span>Driver&rsquo;s licenses / photo IDs</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-4"><span>Health insurance cards (incl. infant)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-5"><span>Vehicle registration &amp; insurance</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-6"><span>Small cash for Tour-Thru Tree ($5&ndash;10)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-7"><span>Offline maps downloaded (WA, OR, CA)</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127807;</span>
+            <h3>Zero-Oil Vegan Food &amp; Cooler</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="food">
+            <li><label><input type="checkbox" data-key="food-0"><span>Heavy-duty cooler + block ice / cold packs</span></label></li>
+            <li><label><input type="checkbox" data-key="food-1"><span>Prepped zero-oil whole-food vegan meals</span></label></li>
+            <li><label><input type="checkbox" data-key="food-2"><span>Reusable containers for reheating</span></label></li>
+            <li><label><input type="checkbox" data-key="food-3"><span>Picnic blanket &amp; utensil set</span></label></li>
+            <li><label><input type="checkbox" data-key="food-4"><span>Reusable water bottles (1 per person)</span></label></li>
+            <li><label><input type="checkbox" data-key="food-5"><span>Trail snacks, fruit, granola</span></label></li>
+            <li><label><input type="checkbox" data-key="food-6"><span>Paper towels &amp; trash bags</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128118;</span>
+            <h3>Baby &amp; Kids (TinTin, Sami, Vihaan)</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="kids">
+            <li><label><input type="checkbox" data-key="kids-0"><span>Front/backpack baby carrier (trails &amp; boardwalks)</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-1"><span>Diapers, wipes &amp; changing pad</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-2"><span>Infant food / feeding supplies</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-3"><span>Kids&rsquo; water shoes for Fern Canyon</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-4"><span>Spare dry socks &amp; change of clothes</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-5"><span>Car entertainment (tablets, books, games)</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-6"><span>Sun hats &amp; kid-safe sunscreen</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127794;</span>
+            <h3>Clothing &amp; Gear</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="gear">
+            <li><label><input type="checkbox" data-key="gear-0"><span>Water sandals / water shoes (adults)</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-1"><span>Standard walking / hiking shoes</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-2"><span>Removable layers (fleece + rain shell)</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-3"><span>Spare dry socks for everyone</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-4"><span>Daypacks &amp; reusable water bottles</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-5"><span>Camera / phone &amp; chargers</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-6"><span>Binoculars (Roosevelt elk, seals, whales)</span></label></li>
+            <li><label><input type="checkbox" data-key="gear-7"><span>First aid kit &amp; medications</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128663;</span>
+            <h3>Car &amp; Road Trip</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="car">
+            <li><label><input type="checkbox" data-key="car-0"><span>Full tank &amp; tire pressure check</span></label></li>
+            <li><label><input type="checkbox" data-key="car-1"><span>Phone mount &amp; car chargers</span></label></li>
+            <li><label><input type="checkbox" data-key="car-2"><span>Infant car seat installed &amp; checked</span></label></li>
+            <li><label><input type="checkbox" data-key="car-3"><span>Pillows &amp; blankets for car naps</span></label></li>
+            <li><label><input type="checkbox" data-key="car-4"><span>Trash bags &amp; wet wipes</span></label></li>
+            <li><label><input type="checkbox" data-key="car-5"><span>Roadside assistance / AAA info</span></label></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Redwood National &amp; State Parks &bull; Family Long Weekend Itinerary</p>
+    <p class="footer__small">Build 2026-r7 &bull; Sat reordered: groves in PM, Fern Canyon after 5</p>
+  </footer>
+
+  <!-- Trip Tracker -->
+  <div id="tracker" class="tracker">
+    <button class="tracker__toggle">
+      <span class="tracker__dot"></span>
+      <span class="tracker__summary">Trip Tracker</span>
+      <span class="tracker__arrow">&#9662;</span>
+    </button>
+    <div class="tracker__body">
+      <div class="tracker__content"></div>
+    </div>
+  </div>
+
+  <button id="installBtn" class="install-btn" hidden>&#11015;&#65039; Install app</button>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
+
+  <script src="script.js?v=7"></script>
+  <script src="tracker.js?v=7"></script>
+  <script src="weather.js?v=7"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+    (function () {
+      var deferred = null;
+      var btn = document.getElementById('installBtn');
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault(); deferred = e; if (btn) btn.hidden = false;
+      });
+      if (btn) btn.addEventListener('click', function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.finally(function () { deferred = null; btn.hidden = true; });
+      });
+      window.addEventListener('appinstalled', function () { if (btn) btn.hidden = true; });
+    })();
+  </script>
+</body>
+</html>

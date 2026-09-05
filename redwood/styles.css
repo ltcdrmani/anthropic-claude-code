@@ -1,24 +1,24 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary: #1a5276;
-  --primary-dark: #0e3a55;
-  --primary-light: #2980b9;
-  --accent: #e67e22;
-  --accent-dark: #d35400;
-  --green: #27ae60;
-  --green-light: #eafaf1;
-  --yellow: #f39c12;
-  --yellow-light: #fef9e7;
-  --red: #e74c3c;
-  --red-light: #fdedec;
-  --blue-light: #ebf5fb;
-  --bg: #f8f9fa;
+  --primary: #2c5f2d;
+  --primary-dark: #183418;
+  --primary-light: #4a8b4d;
+  --accent: #a0522d;
+  --accent-dark: #7d3f22;
+  --green: #3d7a40;
+  --green-light: #e8f3e9;
+  --yellow: #c8922e;
+  --yellow-light: #fbf3e2;
+  --red: #b5432f;
+  --red-light: #f7e6e2;
+  --blue-light: #eaf3ea;
+  --bg: #f6f4ee;
   --bg-white: #ffffff;
-  --text: #2c3e50;
-  --text-muted: #6c757d;
-  --border: #dee2e6;
-  --border-light: #e9ecef;
+  --text: #2c352b;
+  --text-muted: #6b6f64;
+  --border: #e1ddd1;
+  --border-light: #ece8dd;
   --radius: 12px;
   --shadow: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
@@ -74,14 +74,14 @@ ul, ol { padding-left: 1.25rem; }
   background: var(--accent);
   color: #fff;
 }
-.btn--primary:hover { background: var(--accent-dark); box-shadow: 0 8px 24px rgba(230,126,34,0.35); }
+.btn--primary:hover { background: var(--accent-dark); box-shadow: 0 8px 24px rgba(160,82,45,0.35); }
 
 /* NAV */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(26,82,118,0.95);
+  background: rgba(24,52,24,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,0.1);
   transition: box-shadow var(--transition);
@@ -193,21 +193,21 @@ ul, ol { padding-left: 1.25rem; }
   text-align: center;
   padding: 6rem 1.5rem 4rem;
   position: relative;
-  background: linear-gradient(135deg, #1a5276 0%, #2c3e50 50%, #1a5276 100%);
+  background: linear-gradient(135deg, #183418 0%, #24331f 50%, #2c5f2d 100%);
   overflow: hidden;
 }
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 80%, rgba(230,126,34,0.15), transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(41,128,185,0.2), transparent 50%);
+    radial-gradient(ellipse at 20% 80%, rgba(160,82,45,0.22), transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(74,139,77,0.25), transparent 50%);
   pointer-events: none;
 }
 .hero__content { position: relative; z-index: 1; max-width: 700px; }
 .hero__label {
   display: inline-block;
-  background: rgba(230,126,34,0.2);
+  background: rgba(160,82,45,0.2);
   color: var(--accent);
   padding: 0.35rem 1rem;
   border-radius: 100px;
@@ -215,7 +215,7 @@ ul, ol { padding-left: 1.25rem; }
   font-weight: 600;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(230,126,34,0.3);
+  border: 1px solid rgba(160,82,45,0.3);
 }
 .hero__title {
   font-family: var(--font-display);
@@ -1049,7 +1049,7 @@ strong .map-link:hover { color: var(--accent); }
 .tracker__dot--green  { background: #27ae60; box-shadow: 0 0 8px rgba(39,174,96,0.6); }
 .tracker__dot--blue   { background: #2980b9; box-shadow: 0 0 8px rgba(41,128,185,0.6); }
 .tracker__dot--yellow { background: #f39c12; box-shadow: 0 0 8px rgba(243,156,18,0.6); }
-.tracker__dot--orange { background: #e67e22; box-shadow: 0 0 8px rgba(230,126,34,0.6); }
+.tracker__dot--orange { background: #e67e22; box-shadow: 0 0 8px rgba(160,82,45,0.6); }
 .tracker__dot--red    { background: #e74c3c; box-shadow: 0 0 8px rgba(231,76,60,0.6); }
 .tracker__dot--gray   { background: #6c757d; box-shadow: none; }
 
@@ -1103,7 +1103,7 @@ strong .map-link:hover { color: var(--accent); }
 .tracker__badge--green  { background: rgba(39,174,96,0.2);  color: #2ecc71; }
 .tracker__badge--blue   { background: rgba(41,128,185,0.2); color: #5dade2; }
 .tracker__badge--yellow { background: rgba(243,156,18,0.2); color: #f5b041; }
-.tracker__badge--orange { background: rgba(230,126,34,0.2); color: #f0b27a; }
+.tracker__badge--orange { background: rgba(160,82,45,0.2); color: #f0b27a; }
 .tracker__badge--red    { background: rgba(231,76,60,0.2);  color: #f1948a; }
 .tracker__badge--gray   { background: rgba(108,117,125,0.2);color: #adb5bd; }
 .tracker__day-badge {
@@ -1140,10 +1140,7 @@ strong .map-link:hover { color: var(--accent); }
 }
 
 /* TRIP PROGRESS (hero) */
-.trip-progress {
-  max-width: 340px;
-  margin: 0 auto 2rem;
-}
+.trip-progress { max-width: 340px; margin: 0 auto 2rem; }
 .trip-progress__bar {
   height: 8px;
   background: rgba(255,255,255,0.18);
@@ -1152,16 +1149,12 @@ strong .map-link:hover { color: var(--accent); }
   margin-bottom: 0.55rem;
 }
 .trip-progress__bar span {
-  display: block;
-  height: 100%;
+  display: block; height: 100%;
   background: var(--accent);
   border-radius: 5px;
   transition: width 0.5s ease;
 }
-.trip-progress__text {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.82);
-}
+.trip-progress__text { font-size: 0.85rem; color: rgba(255,255,255,0.82); }
 .trip-progress__text a { color: #fff; font-weight: 600; text-decoration: underline; }
 
 /* TODAY highlight */
@@ -1177,7 +1170,7 @@ strong .map-link:hover { color: var(--accent); }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   vertical-align: middle;
-  box-shadow: 0 0 0 3px rgba(39,174,96,0.18);
+  box-shadow: 0 0 0 3px rgba(61,122,64,0.2);
 }
 .day-section.is-today { box-shadow: inset 5px 0 0 var(--green); }
 
@@ -1210,23 +1203,23 @@ strong .map-link:hover { color: var(--accent); }
 
 /* ============ DARK MODE ============ */
 :root[data-theme="dark"] {
-  --primary: #4a90c2;
-  --primary-light: #5dade2;
-  --accent: #e88a3c;
-  --accent-dark: #cf7327;
-  --green: #2ecc71;
-  --green-light: #12301f;
-  --yellow: #e2ad3e;
+  --primary: #5aa85d;
+  --primary-light: #6fbf73;
+  --accent: #c17a4a;
+  --accent-dark: #a0522d;
+  --green: #4caf6a;
+  --green-light: #12301c;
+  --yellow: #d9a94a;
   --yellow-light: #2e2611;
-  --red: #ec6455;
-  --red-light: #361d1a;
-  --blue-light: #15212d;
-  --bg: #0f1720;
-  --bg-white: #18232f;
-  --text: #e6ecf2;
-  --text-muted: #9fb1c1;
-  --border: #2c3a47;
-  --border-light: #222d38;
+  --red: #e07a5f;
+  --red-light: #361f1a;
+  --blue-light: #14231a;
+  --bg: #12180f;
+  --bg-white: #1b241a;
+  --text: #e8eee4;
+  --text-muted: #a3b09b;
+  --border: #2f3a2b;
+  --border-light: #26301f;
   --shadow: 0 2px 10px rgba(0,0,0,0.45);
   --shadow-lg: 0 10px 34px rgba(0,0,0,0.55);
 }
@@ -1236,19 +1229,17 @@ strong .map-link:hover { color: var(--accent); }
 :root[data-theme="dark"] .overview__card h3,
 :root[data-theme="dark"] .route-summary h3,
 :root[data-theme="dark"] .validation__group-title,
-:root[data-theme="dark"] .validation__verdict h3 { color: #d6e4f2; }
-:root[data-theme="dark"] .weather-bar { background: #2a2510; border-color: #45391a; color: var(--text); }
+:root[data-theme="dark"] .validation__verdict h3 { color: #d4e8cf; }
+:root[data-theme="dark"] .weather-bar { background: #262218; border-color: #453d1a; color: var(--text); }
 :root[data-theme="dark"] .weather-bar--cold { background: #16242f; border-color: #274056; }
-:root[data-theme="dark"] .eruption-box { background: #241d10; border-color: #45391a; }
+:root[data-theme="dark"] .eruption-box { background: #241f12; border-color: #453d1a; }
 :root[data-theme="dark"] .eruption-box p { color: var(--text); }
-:root[data-theme="dark"] .timeline__alt { background: #2a2418; color: #d3bd97; border-color: #40371f; }
 :root[data-theme="dark"] .meta-tag--drive { background: #13293b; color: #8fc2e6; border-color: #1e3c54; }
-:root[data-theme="dark"] .meta-tag--sight { background: #2f2611; color: #e2b968; border-color: #45391a; }
+:root[data-theme="dark"] .meta-tag--sight { background: #2f2611; color: #e2b968; border-color: #453d1a; }
 :root[data-theme="dark"] .meta-tag--food  { background: #12301f; color: #6fd39a; border-color: #1c4630; }
 :root[data-theme="dark"] .meta-tag--hotel { background: #271633; color: #c79be0; border-color: #3b2450; }
-:root[data-theme="dark"] .meta-tag--info  { background: #2f2611; color: #e2b968; border-color: #45391a; }
-:root[data-theme="dark"] .nav { background: rgba(10,20,28,0.95); }
-:root[data-theme="dark"] .route-map img { opacity: 0.94; }
+:root[data-theme="dark"] .meta-tag--info  { background: #2f2611; color: #e2b968; border-color: #453d1a; }
+:root[data-theme="dark"] .nav { background: rgba(10,18,9,0.95); }
 
 /* THEME TOGGLE BUTTON */
 .theme-toggle {

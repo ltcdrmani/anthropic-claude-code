@@ -1,0 +1,16 @@
+{
+  "name": "PNW & The Rockies — Family Road Trip",
+  "short_name": "PNW Rockies",
+  "description": "Sujitha's family road trip through the Pacific Northwest and Rocky Mountains — itinerary, live tracker, weather, and checklist.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0e3a55",
+  "theme_color": "#1a5276",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
