@@ -161,3 +161,13 @@ img { max-width: 100%; display: block; }
   margin-right: 5px;
   vertical-align: middle;
 }
+
+/* PROFILE PHOTO */
+.avatar-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 0 0 4px var(--accent), 0 0 0 8px rgba(108,99,255,0.2);
+}
