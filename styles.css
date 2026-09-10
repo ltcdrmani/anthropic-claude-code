@@ -135,3 +135,23 @@ img { max-width: 100%; display: block; }
   .contact__wrapper { grid-template-columns: 1fr; }
   .contact__links { flex-direction: row; flex-wrap: wrap; padding-top: 0; }
 }
+
+/* LOGOS */
+.edu__icon img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px;
+}
+.company-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: #fff;
+  vertical-align: middle;
+  margin-right: 5px;
+  padding: 1px;
+}
