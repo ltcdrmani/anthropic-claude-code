@@ -171,3 +171,46 @@ img { max-width: 100%; display: block; }
   object-position: center top;
   box-shadow: 0 0 0 4px var(--accent), 0 0 0 8px rgba(108,99,255,0.2);
 }
+
+/* QUOTE */
+.quote-section {
+  padding: 4rem 0;
+  background: var(--bg);
+}
+.quote {
+  border: none;
+  text-align: center;
+  position: relative;
+  padding: 2.5rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.quote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  color: var(--accent);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.quote p {
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+.quote p span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
