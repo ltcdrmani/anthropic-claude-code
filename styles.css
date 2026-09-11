@@ -273,9 +273,9 @@ img   { max-width: 100%; display: block; }
   display: flex; justify-content: flex-end; margin-bottom: .6rem;
 }
 .timeline__logo img {
-  height: 28px; width: auto; max-width: 110px;
+  height: 44px; width: auto; max-width: 140px;
   object-fit: contain; border-radius: 6px;
-  background: var(--white); padding: 3px 7px;
+  background: var(--white); padding: 4px 10px;
   box-shadow: var(--shadow-sm);
 }
 .timeline__logo .logo-emoji {
