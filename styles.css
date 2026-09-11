@@ -273,13 +273,15 @@ img   { max-width: 100%; display: block; }
   display: flex; justify-content: flex-end; margin-bottom: .6rem;
 }
 .timeline__logo img {
-  height: 44px; width: auto; max-width: 140px;
-  object-fit: contain; border-radius: 6px;
-  background: var(--white); padding: 4px 10px;
+  width: 130px; height: 56px;
+  object-fit: contain; border-radius: 8px;
+  background: var(--white); padding: 6px 12px;
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
 }
 .timeline__logo .logo-emoji {
-  font-size: 22px; line-height: 28px;
+  font-size: 28px; line-height: 56px;
+  width: 130px; text-align: right;
 }
 .timeline__date  { font-size: .75rem; color: var(--navy-light); font-weight: 700; letter-spacing: .04em; }
 .timeline__co    { font-size: .8rem; color: var(--muted); margin-top: .2rem; }
