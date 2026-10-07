@@ -89,7 +89,7 @@
     function add(p, icon, isStop) {
       pts.push([p.lat, p.lng]);
       line.push([p.lat, p.lng]);
-      L.marker([p.lat, p.lng], { icon: icon })
+      L.marker([p.lat, p.lng], { icon: icon, zIndexOffset: 600 })
         .bindPopup(popupHtml(p.name, p.q, isStop ? d.label : null))
         .addTo(dayLayers);
     }
@@ -102,7 +102,7 @@
     }
     // stops
     d.stops.forEach(function (s) {
-      add(s, numPin(d.color, s.n ? String(s.n) : '&#9873;'), true);
+      add(s, numPin(d.color, s.n ? String(s.n) : '&#9679;'), true);
     });
     // end
     if (d.end === BASE) {
@@ -114,7 +114,7 @@
   });
 
   // base marker (once)
-  L.marker([BASE.lat, BASE.lng], { icon: glyphPin('mpin--base', '&#127968;') })
+  L.marker([BASE.lat, BASE.lng], { icon: glyphPin('mpin--base', '&#127968;'), zIndexOffset: 800 })
     .bindPopup(popupHtml(BASE.name, BASE.q, null))
     .addTo(dayLayers);
   pts.push([BASE.lat, BASE.lng]);
