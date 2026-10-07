@@ -423,6 +423,37 @@ ul, ol { padding-left: 1.25rem; }
   color: var(--accent-dark);
 }
 
+/* TESLA CHARGING BAR */
+.charge-bar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: #eafaf0;
+  border: 1px solid #c3ecd2;
+  border-left: 4px solid #2e9e5b;
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  margin: -1rem 0 2rem;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+.charge-bar__icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.05rem; }
+.charge-bar b { color: #1f7d45; }
+.charge-chip {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #1f7d45;
+  background: #d6f3e1;
+  border: 1px solid #a9e0bf;
+  border-radius: 100px;
+  padding: 0.08rem 0.6rem;
+  margin: 0.15rem 0.2rem 0 0;
+  text-decoration: none;
+}
+.charge-chip:hover { background: #c3ecd2; }
+
 /* TIMELINE */
 .timeline {
   position: relative;
@@ -1241,6 +1272,10 @@ strong .map-link:hover { color: var(--accent); }
 :root[data-theme="dark"] .weather-bar--cold { background: #16242f; border-color: #274056; }
 :root[data-theme="dark"] .eruption-box { background: #241d10; border-color: #45391a; }
 :root[data-theme="dark"] .eruption-box p { color: var(--text); }
+:root[data-theme="dark"] .charge-bar { background: #10281a; border-color: #1f5436; color: var(--text); }
+:root[data-theme="dark"] .charge-bar b { color: #6fd79b; }
+:root[data-theme="dark"] .charge-chip { color: #8fe3b4; background: #16341f; border-color: #2a5c3c; }
+:root[data-theme="dark"] .charge-chip:hover { background: #1f4a2d; }
 :root[data-theme="dark"] .timeline__alt { background: #2a2418; color: #d3bd97; border-color: #40371f; }
 :root[data-theme="dark"] .meta-tag--drive { background: #13293b; color: #8fc2e6; border-color: #1e3c54; }
 :root[data-theme="dark"] .meta-tag--sight { background: #2f2611; color: #e2b968; border-color: #45391a; }
