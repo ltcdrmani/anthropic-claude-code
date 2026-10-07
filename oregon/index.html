@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PNW Family Road Trip &mdash; Coast, Crater Lake &amp; Silver Falls</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#15697e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="PNW 3-Day" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <script>try{var t=localStorage.getItem('theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Coast &bull; Crater Lake</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#overview">Overview</a></li>
+        <li class="nav__dropdown">
+          <button class="nav__dropdown-btn" aria-expanded="false">Days <span class="nav__dropdown-arrow">&#9662;</span></button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="#day1">Day 1 &mdash; Oregon Coast</a></li>
+            <li><a href="#day2">Day 2 &mdash; Crater Lake</a></li>
+            <li><a href="#day3">Day 3 &mdash; Silver Falls</a></li>
+          </ul>
+        </li>
+        <li><a href="#weather">Weather &amp; Gear</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__label">Family Road Trip</p>
+      <h1 class="hero__title">Coast, Crater Lake &amp; Silver Falls</h1>
+      <p class="hero__subtitle">3 Days &bull; Portland &rarr; Oregon Coast &rarr; Lebanon &rarr; Crater Lake &rarr; Silver Falls &rarr; Seattle</p>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">~900</span>
+          <span class="stat__label">Total Miles</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">2</span>
+          <span class="stat__label">States</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">3</span>
+          <span class="stat__label">Days</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">7</span>
+          <span class="stat__label">Travelers</span>
+        </div>
+      </div>
+      <a href="#overview" class="btn btn--primary">View Itinerary</a>
+    </div>
+  </section>
+
+  <section class="section overview" id="overview">
+    <div class="container">
+      <h2 class="section__title">Trip Overview</h2>
+      <p class="section__subtitle">Oregon coast wonders, a sapphire caldera, and a canyon of ten waterfalls</p>
+      <div class="overview__grid">
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F46A;</div>
+          <h3>Travelers</h3>
+          <p>4 Adults &bull; 3 Kids (Sam, 12 &bull; Vihaan, 7 &bull; Advaith, 5)</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F957;</div>
+          <h3>Meals</h3>
+          <p>Packed meals for adults; kid-friendly dining &amp; caf&eacute; options along each route</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F3DE;</div>
+          <h3>Highlights</h3>
+          <p>Thor&rsquo;s Well, Sea Lion Caves, Crater Lake rim, and the Trail of Ten Falls</p>
+        </div>
+        <div class="overview__card">
+          <div class="overview__icon">&#x1F3E8;</div>
+          <h3>Lodging</h3>
+          <p>Two nights at a hotel in Lebanon, OR (central base for Days 1 &amp; 2)</p>
+        </div>
+      </div>
+      <div class="route-summary">
+        <h3>Route at a Glance</h3>
+        <div class="route-stops">
+          <div class="route-stop"><span class="route-dot"></span><span>Portland, OR</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Central Oregon Coast</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Lebanon, OR</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Crater Lake NP</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Silver Falls SP</span></div>
+          <div class="route-line"></div>
+          <div class="route-stop"><span class="route-dot"></span><span>Seattle, WA</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="section day-section day-section--alt" id="day1">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 1</span>
+        <h2 class="day-header__title">Portland to the Central Oregon Coast</h2>
+        <p class="day-header__date">Portland &rarr; Coast highlights &rarr; Overnight in Lebanon &bull; ~300 mi</p>
+      </div>
+
+      <div class="weather-bar weather-bar--cold">
+        <span class="weather-bar__icon">&#127754;</span>
+        <div>
+          <strong>Weather &amp; Gear:</strong> Breezy coast &mdash; High 62&deg;F / Low 45&deg;F with coastal winds and ocean spray. Pack windbreakers, hooded rain shells, and extra dry socks for the kids.
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">8:00 &ndash; 10:15 AM</div>
+          <div class="timeline__content">
+            <h3>Drive: Portland &rarr; <a href="https://www.google.com/maps/search/?api=1&query=Devils+Punchbowl+State+Natural+Area+Oregon" class="map-link" target="_blank" rel="noopener">Devils Punchbowl</a></h3>
+            <p>~110 miles via I-5 South &amp; US-20 West to the coast.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~110 mi &bull; I-5 S / US-20 W</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">10:15 &ndash; 11:00 AM</div>
+          <div class="timeline__content">
+            <h3>1. <a href="https://www.google.com/maps/search/?api=1&query=Devils+Punchbowl+State+Natural+Area+Oregon" class="map-link" target="_blank" rel="noopener">Devils Punchbowl State Natural Area</a></h3>
+            <p>A short ~0.2-mi walk. Look down into the churning hollow rock cavern from the secure upper viewing perimeter.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">~0.2 mi walk &bull; Viewpoint</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:15 AM &ndash; 12:45 PM</div>
+          <div class="timeline__content">
+            <h3>2. <a href="https://www.google.com/maps/search/?api=1&query=Yaquina+Head+Outstanding+Natural+Area" class="map-link" target="_blank" rel="noopener">Yaquina Head</a> &amp; Lunch</h3>
+            <p>~0.5-mi walk. See Oregon&rsquo;s tallest lighthouse and spot seals at Cobble Beach. Adults eat packed lunch; kids have packed snacks or quick bites.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">~0.5 mi &bull; Lighthouse &amp; seals</span>
+              <span class="meta-tag meta-tag--food">Packed lunch / kid snacks</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">1:30 &ndash; 2:15 PM</div>
+          <div class="timeline__content">
+            <h3>3. <a href="https://www.google.com/maps/search/?api=1&query=Thors+Well+Cape+Perpetua+Oregon" class="map-link" target="_blank" rel="noopener">Thor&rsquo;s Well</a> &amp; Spouting Horn</h3>
+            <p>~0.4-mi walk. Watch waves drain into the natural basalt sinkhole from the paved viewpoints. <strong>Keep 5-year-old Advaith close by hand</strong> &mdash; slippery rocks and surging water.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">~0.4 mi &bull; Hold hands near the edge</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">2:30 &ndash; 3:30 PM</div>
+          <div class="timeline__content">
+            <h3>4. <a href="https://www.google.com/maps/search/?api=1&query=Sea+Lion+Caves+Oregon" class="map-link" target="_blank" rel="noopener">Sea Lion Caves</a></h3>
+            <p>~0.3-mi walk. Descend 208 feet via elevator into America&rsquo;s largest sea cave to watch hundreds of wild sea lions.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Elevator &bull; Largest sea cave</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">3:35 &ndash; 4:30 PM</div>
+          <div class="timeline__content">
+            <h3>5. <a href="https://www.google.com/maps/search/?api=1&query=Heceta+Head+Lighthouse" class="map-link" target="_blank" rel="noopener">Heceta Head Lighthouse</a></h3>
+            <p>~0.8-mi round-trip. A scenic, gentle uphill walk leading to the historic cliffside lighthouse.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">~0.8 mi RT &bull; Gentle uphill</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">4:50 &ndash; 5:40 PM</div>
+          <div class="timeline__content">
+            <h3>6. <a href="https://www.google.com/maps/search/?api=1&query=Oregon+Dunes+National+Recreation+Area" class="map-link" target="_blank" rel="noopener">Oregon Dunes</a></h3>
+            <p>~0.5-mi walk. Let Sam, Vihaan, and Advaith run and tumble down the massive sand slopes before sunset.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Sand dunes &bull; Kids&rsquo; favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">5:40 &ndash; 7:55 PM</div>
+          <div class="timeline__content">
+            <h3>Drive: Oregon Dunes &rarr; <a href="https://www.google.com/maps/search/?api=1&query=Lebanon+Oregon" class="map-link" target="_blank" rel="noopener">Lebanon, OR</a></h3>
+            <p>~136 miles via OR-38 East &amp; I-5 North to your hotel.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~136 mi &bull; OR-38 E / I-5 N</span>
+              <span class="meta-tag meta-tag--hotel">Overnight: Lebanon (Night 1)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 1 Dining</h4>
+        <ul>
+          <li><strong>Kids:</strong> Dinner stop in <a href="https://www.google.com/maps/search/?api=1&query=Florence+Oregon+restaurants" class="map-link" target="_blank" rel="noopener">Florence</a> (fresh fish &amp; chips, pizza, burgers) &mdash; or a hot dinner on arrival in Lebanon.</li>
+          <li><strong>Adults:</strong> Packed meals from the cooler throughout the day.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="section day-section" id="day2">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 2</span>
+        <h2 class="day-header__title">Day Trip to Crater Lake National Park</h2>
+        <p class="day-header__date">Lebanon &rarr; Crater Lake &rarr; Overnight in Lebanon &bull; ~340 mi round trip</p>
+      </div>
+
+      <div class="weather-bar weather-bar--cold">
+        <span class="weather-bar__icon">&#127956;&#65039;</span>
+        <div>
+          <strong>Weather &amp; Gear:</strong> High-elevation cold &amp; sunny &mdash; High 43&deg;F / Low 27&deg;F. Dress in warm thermal layers, fleece, winter coats, beanies, and gloves. <strong>Bundle up before exiting the vehicle.</strong>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">8:00 &ndash; 11:15 AM</div>
+          <div class="timeline__content">
+            <h3>Drive: Lebanon &rarr; <a href="https://www.google.com/maps/search/?api=1&query=Crater+Lake+National+Park+North+Entrance" class="map-link" target="_blank" rel="noopener">Crater Lake (North Entrance)</a></h3>
+            <p>~160 miles via I-5 South, OR-58 East &amp; OR-138 West.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~160 mi &bull; I-5 S / OR-58 E / OR-138 W</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">11:15 AM &ndash; 12:15 PM</div>
+          <div class="timeline__content">
+            <h3>1. <a href="https://www.google.com/maps/search/?api=1&query=Crater+Lake+Rim+Village" class="map-link" target="_blank" rel="noopener">Rim Visitor Center</a> &amp; Lunch</h3>
+            <p>~0.2-mi walk to a spectacular caldera overlook. Adults enjoy packed lunch; kids can get warm soup, mac &amp; cheese, or sandwiches at the Rim Village Caf&eacute;.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Caldera overlook</span>
+              <span class="meta-tag meta-tag--food">Rim Village Caf&eacute; for kids</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">12:15 &ndash; 1:00 PM</div>
+          <div class="timeline__content">
+            <h3>2. <a href="https://www.google.com/maps/search/?api=1&query=Watchman+Overlook+Crater+Lake" class="map-link" target="_blank" rel="noopener">Watchman Overlook</a></h3>
+            <p>~0.1-mi overlook. A direct, panoramic perspective across Wizard Island.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Wizard Island views</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">1:00 &ndash; 1:45 PM</div>
+          <div class="timeline__content">
+            <h3>3. <a href="https://www.google.com/maps/search/?api=1&query=Crater+Lake+Rim+Drive" class="map-link" target="_blank" rel="noopener">Scenic Rim Drive</a></h3>
+            <p>A ~22-mile drive along the caldera rim with short viewpoint pullouts.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~22 mi &bull; Rim pullouts</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">1:45 &ndash; 2:30 PM</div>
+          <div class="timeline__content">
+            <h3>4. <a href="https://www.google.com/maps/search/?api=1&query=Pinnacles+Overlook+Crater+Lake" class="map-link" target="_blank" rel="noopener">Pinnacles Overlook</a></h3>
+            <p>A level, very short walk (&lt; 0.1 mi) to see 100-foot volcanic fossil fumaroles.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">&lt; 0.1 mi &bull; Volcanic spires</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">2:30 &ndash; 3:45 PM</div>
+          <div class="timeline__content">
+            <h3>5. <a href="https://www.google.com/maps/search/?api=1&query=Plaikni+Falls+Trail+Crater+Lake" class="map-link" target="_blank" rel="noopener">Plaikni Falls Trail</a></h3>
+            <p>2.0-mi round-trip. A gentle, flat forest trail suitable for all three kids, ending at a cascade.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">2.0 mi RT &bull; Flat &amp; family-easy</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">3:45 &ndash; 4:30 PM</div>
+          <div class="timeline__content">
+            <h3>6. East Rim Viewpoints</h3>
+            <p>Stop at <a href="https://www.google.com/maps/search/?api=1&query=Cloudcap+Overlook+Crater+Lake" class="map-link" target="_blank" rel="noopener">Cloudcap</a> or <a href="https://www.google.com/maps/search/?api=1&query=Pumice+Castle+Overlook+Crater+Lake" class="map-link" target="_blank" rel="noopener">Pumice Castle</a> viewpoints before starting the return drive.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">Cloudcap &bull; Pumice Castle</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">4:30 &ndash; 7:30 PM</div>
+          <div class="timeline__content">
+            <h3>Drive: Crater Lake &rarr; <a href="https://www.google.com/maps/search/?api=1&query=Lebanon+Oregon" class="map-link" target="_blank" rel="noopener">Lebanon, OR</a></h3>
+            <p>~160 miles return drive to your hotel in Lebanon.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~160 mi return</span>
+              <span class="meta-tag meta-tag--hotel">Overnight: Lebanon (Night 2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 2 Dining</h4>
+        <ul>
+          <li><strong>Kids:</strong> Warm soup, mac &amp; cheese, or sandwiches at the Rim Village Caf&eacute;.</li>
+          <li><strong>Adults:</strong> Packed lunch at the rim &mdash; keep hot drinks in insulated bottles for the cold.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="section day-section day-section--alt" id="day3">
+    <div class="container">
+      <div class="day-header">
+        <span class="day-header__badge">Day 3</span>
+        <h2 class="day-header__title">Silver Falls State Park &rarr; Home to Seattle</h2>
+        <p class="day-header__date">Lebanon &rarr; Silver Falls &rarr; Seattle &bull; ~265 mi</p>
+      </div>
+
+      <div class="weather-bar">
+        <span class="weather-bar__icon">&#127756;&#65039;</span>
+        <div>
+          <strong>Weather &amp; Gear:</strong> Damp, shaded forest &mdash; High 64&deg;F / Low 43&deg;F. Trails near the waterfalls stay wet; wear sturdy walking shoes with reliable traction.
+        </div>
+      </div>
+
+      <div class="eruption-box">
+        <h4>&#128509;&#65039; Feature Hike: The Winter Falls Loop (~5.0 miles)</h4>
+        <p><strong>Trail:</strong> Winter Falls Loop, part of the <a href="https://www.google.com/maps/search/?api=1&query=Trail+of+Ten+Falls+Silver+Falls+State+Park" class="map-link" target="_blank" rel="noopener">Trail of Ten Falls</a> network.</p>
+        <p><strong>Highlights:</strong> 7 distinct waterfalls, including the 177-ft <strong>South Falls</strong>, Lower South Falls, and Winter Falls.</p>
+        <p><strong>Kid highlight:</strong> The trail passes <strong>directly behind the curtain of water</strong> at South Falls and Lower South Falls &mdash; expect mist and slick rock, so hold the little ones&rsquo; hands.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__time">8:00 &ndash; 8:50 AM</div>
+          <div class="timeline__content">
+            <h3>Drive: Lebanon &rarr; <a href="https://www.google.com/maps/search/?api=1&query=Silver+Falls+State+Park+Oregon" class="map-link" target="_blank" rel="noopener">Silver Falls State Park</a></h3>
+            <p>~38 miles north via OR-214 N. Parking pass: $10&ndash;$12.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~38 mi &bull; OR-214 N</span>
+              <span class="meta-tag meta-tag--info">Parking pass $10&ndash;$12</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">9:00 AM &ndash; 12:00 PM</div>
+          <div class="timeline__content">
+            <h3>5-Mile Waterfall Hike (Winter Falls Loop)</h3>
+            <p>Walk behind roaring waterfalls, through lush canyon moss, and along scenic footbridges &mdash; seven falls on one loop.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--sight">~5 mi loop &bull; 7 waterfalls</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">12:00 &ndash; 1:15 PM</div>
+          <div class="timeline__content">
+            <h3>Lunch Break</h3>
+            <p>Adults: packed lunch at the picnic grove. Kids: warm grilled cheese, hot cocoa, or burgers at the <a href="https://www.google.com/maps/search/?api=1&query=South+Falls+Day+Use+Area+Silver+Falls" class="map-link" target="_blank" rel="noopener">South Falls Day-Use Caf&eacute;</a> or nearby in <a href="https://www.google.com/maps/search/?api=1&query=Silverton+Oregon+restaurants" class="map-link" target="_blank" rel="noopener">Silverton</a>.</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--food">Picnic grove &bull; South Falls Caf&eacute; / Silverton</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__time">1:15 &ndash; 5:00 PM</div>
+          <div class="timeline__content">
+            <h3>Drive: Silver Falls / Silverton &rarr; <a href="https://www.google.com/maps/search/?api=1&query=Seattle+WA" class="map-link" target="_blank" rel="noopener">Seattle, WA</a></h3>
+            <p>~225 miles north via I-5 N (approx. 3.5&ndash;4 hours of driving). Arrive Seattle around 5:00 PM &mdash; trip complete!</p>
+            <div class="timeline__meta">
+              <span class="meta-tag meta-tag--drive">~225 mi &bull; I-5 North</span>
+              <span class="meta-tag meta-tag--info">Home for ~5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h4>Day 3 Dining</h4>
+        <ul>
+          <li><strong>Kids:</strong> Grilled cheese, hot cocoa, or burgers at the South Falls Day-Use Caf&eacute; or in Silverton.</li>
+          <li><strong>Adults:</strong> Packed lunch at the picnic grove before the drive home.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEATHER & GEAR -->
+  <section class="section" id="weather">
+    <div class="container">
+      <h2 class="section__title">Weather Forecast &amp; Gear Guide</h2>
+      <p class="section__subtitle">Three very different climates in three days &mdash; pack in layers</p>
+      <div class="validation__grid">
+        <div class="valid-card valid-card--info">
+          <h4>&#127754; Day 1 &mdash; Central Oregon Coast</h4>
+          <p><strong>High 62&deg;F / Low 45&deg;F.</strong> Coastal winds and ocean spray. Pack windbreakers, hooded rain shells, and extra dry socks for the kids.</p>
+        </div>
+        <div class="valid-card valid-card--warn">
+          <h4>&#127956;&#65039; Day 2 &mdash; Crater Lake NP</h4>
+          <p><strong>High 43&deg;F / Low 27&deg;F (cold / sunny).</strong> High-elevation cold &mdash; warm thermal layers, fleece, winter coats, beanies, and gloves. Bundle up before stepping out of the car.</p>
+        </div>
+        <div class="valid-card valid-card--ok">
+          <h4>&#127756;&#65039; Day 3 &mdash; Silver Falls SP</h4>
+          <p><strong>High 64&deg;F / Low 43&deg;F.</strong> Damp, shaded forest trails near waterfalls. Wear sturdy walking shoes with reliable traction &mdash; expect mist behind the falls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="section checklist-section" id="checklist">
+    <div class="container">
+      <h2 class="section__title">Family Road Trip Checklist</h2>
+      <p class="section__subtitle">Tap items to check them off &mdash; progress saves automatically in your browser</p>
+
+      <div class="checklist__progress">
+        <div class="checklist__progress-bar">
+          <div class="checklist__progress-fill" id="progressFill"></div>
+        </div>
+        <span class="checklist__progress-text" id="progressText">0 / 0 complete</span>
+      </div>
+
+      <div class="checklist__controls">
+        <button class="btn btn--small btn--outline" id="uncheckAll">Uncheck All</button>
+        <button class="btn btn--small btn--outline" id="collapseAll">Collapse All</button>
+      </div>
+
+      <div class="checklist__grid">
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#129398;</span>
+            <h3>Warm Layers (Crater Lake)</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="warm">
+            <li><label><input type="checkbox" data-key="warm-0"><span>Thermal base layers for everyone</span></label></li>
+            <li><label><input type="checkbox" data-key="warm-1"><span>Fleece + winter coats (sub-freezing AM)</span></label></li>
+            <li><label><input type="checkbox" data-key="warm-2"><span>Beanies &amp; gloves (incl. kid sizes)</span></label></li>
+            <li><label><input type="checkbox" data-key="warm-3"><span>Windbreakers / hooded rain shells (coast)</span></label></li>
+            <li><label><input type="checkbox" data-key="warm-4"><span>Insulated bottles for hot drinks</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128118;</span>
+            <h3>Kids (Sam, Vihaan, Advaith)</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="kids">
+            <li><label><input type="checkbox" data-key="kids-0"><span>Extra changes of clothes &amp; socks (tide pools &amp; waterfalls)</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-1"><span>Sturdy walking shoes with traction</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-2"><span>Car entertainment (tablets, books, games)</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-3"><span>Snacks &amp; water bottles</span></label></li>
+            <li><label><input type="checkbox" data-key="kids-4"><span>Hand sanitizer &amp; wipes</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#127857;</span>
+            <h3>Food &amp; Cooler</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="food">
+            <li><label><input type="checkbox" data-key="food-0"><span>Insulated food containers for adults&rsquo; packed meals</span></label></li>
+            <li><label><input type="checkbox" data-key="food-1"><span>Cooler + ice packs</span></label></li>
+            <li><label><input type="checkbox" data-key="food-2"><span>Reusable water bottles (1 per person)</span></label></li>
+            <li><label><input type="checkbox" data-key="food-3"><span>Trail snacks, fruit, granola</span></label></li>
+            <li><label><input type="checkbox" data-key="food-4"><span>Paper towels &amp; trash bags</span></label></li>
+          </ul>
+        </div>
+
+        <div class="checklist-card">
+          <button class="checklist-card__header" aria-expanded="true">
+            <span class="checklist-card__icon">&#128663;</span>
+            <h3>Documents &amp; Car</h3>
+            <span class="checklist-card__count"></span>
+            <span class="checklist-card__arrow">&#9662;</span>
+          </button>
+          <ul class="checklist-card__list" data-group="docs">
+            <li><label><input type="checkbox" data-key="docs-0"><span>America the Beautiful pass (or Crater Lake entry fee)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-1"><span>Silver Falls parking pass ($10&ndash;$12)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-2"><span>Hotel confirmation (Lebanon, 2 nights)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-3"><span>Driver&rsquo;s licenses &amp; insurance</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-4"><span>Downloaded offline Google Maps (coast &amp; Crater Lake)</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-5"><span>Full tank &amp; tire check before each day</span></label></li>
+            <li><label><input type="checkbox" data-key="docs-6"><span>Phone mounts &amp; car chargers</span></label></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Pacific Northwest Family Road Trip &bull; Coast, Crater Lake &amp; Silver Falls</p>
+    <p class="footer__small">Build 2026-o1 &bull; Installable &amp; works offline in no-signal stretches</p>
+  </footer>
+
+  <button id="installBtn" class="install-btn" hidden>&#11015;&#65039; Install app</button>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
+
+  <script src="script.js?v=1"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+    (function () {
+      var deferred = null;
+      var btn = document.getElementById('installBtn');
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault(); deferred = e; if (btn) btn.hidden = false;
+      });
+      if (btn) btn.addEventListener('click', function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.finally(function () { deferred = null; btn.hidden = true; });
+      });
+      window.addEventListener('appinstalled', function () { if (btn) btn.hidden = true; });
+    })();
+  </script>
+</body>
+</html>
