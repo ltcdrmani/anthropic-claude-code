@@ -45,18 +45,6 @@
     }
   ];
 
-  var CHARGERS = [
-    { name: 'Lincoln City Supercharger (8×150kW)', lat: 44.9683, lng: -124.0085, q: 'Tesla Supercharger Lincoln City Outlets Oregon', note: 'Day 1 — only coast fast charger' },
-    { name: 'Halsey Supercharger', lat: 44.3820, lng: -123.1100, q: 'Tesla Supercharger Halsey Oregon', note: 'Day 1 — I-5 top-up before Lebanon' },
-    { name: 'Salem Supercharger', lat: 44.9190, lng: -123.0351, q: 'Tesla Supercharger Salem Oregon', note: 'Nearest to base (north)' },
-    { name: 'Chemult Supercharger (8×325kW)', lat: 43.2177, lng: -121.7807, q: 'Tesla Supercharger Chemult Oregon', note: 'Day 2 — nearest fast charger to Crater Lake' },
-    { name: 'Mazama Village destination charger (16kW, slow)', lat: 42.8641, lng: -122.1686, q: 'Tesla Destination Charger Mazama Village Crater Lake', note: 'In-park top-up only' },
-    { name: 'Medford Supercharger (12×250kW)', lat: 42.3521, lng: -122.8756, q: 'Tesla Supercharger Medford Oregon', note: 'South-entrance route backup' },
-    { name: 'Woodburn Supercharger (12×250kW)', lat: 45.1537, lng: -122.8698, q: 'Tesla Supercharger Woodburn Oregon', note: 'Day 3 — after Silver Falls' },
-    { name: 'Centralia Supercharger', lat: 46.7230, lng: -122.9690, q: 'Tesla Supercharger Centralia Washington', note: 'Day 3 — into Seattle' },
-    { name: 'Tacoma Supercharger', lat: 47.2490, lng: -122.4400, q: 'Tesla Supercharger Tacoma Washington', note: 'Day 3 — into Seattle' }
-  ];
-
   // ---- Helpers -----------------------------------------------------------
   function dir(q) { return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q); }
   function popupHtml(name, q, sub) {
@@ -82,7 +70,6 @@
 
   var pts = [];
   var dayLayers = L.layerGroup().addTo(map);
-  var chargerLayer = L.layerGroup().addTo(map);
 
   DAYS.forEach(function (d) {
     var line = [];
@@ -118,15 +105,6 @@
     .bindPopup(popupHtml(BASE.name, BASE.q, null))
     .addTo(dayLayers);
   pts.push([BASE.lat, BASE.lng]);
-
-  // chargers
-  CHARGERS.forEach(function (c) {
-    L.marker([c.lat, c.lng], { icon: glyphPin('mpin--charge', '&#9889;') })
-      .bindPopup(popupHtml(c.name, c.q, c.note))
-      .addTo(chargerLayer);
-  });
-
-  L.control.layers(null, { '&#9889; Superchargers': chargerLayer }, { collapsed: false, position: 'topright' }).addTo(map);
 
   map.fitBounds(L.latLngBounds(pts).pad(0.12));
 
