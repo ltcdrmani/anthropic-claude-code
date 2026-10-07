@@ -150,6 +150,66 @@ document.querySelectorAll('.day-header, .timeline__item, .weather-bar, .meal-box
   });
 })();
 
+/* TODAY AUTO-FOCUS & TRIP PROGRESS */
+(function () {
+  var DAYS = [
+    { id: 'day1', dates: ['2026-10-09'], label: 'Fri, Oct 9' },
+    { id: 'day2', dates: ['2026-10-10'], label: 'Sat, Oct 10' },
+    { id: 'day3', dates: ['2026-10-11'], label: 'Sun, Oct 11' }
+  ];
+  var N = DAYS.length;
+  var prog = document.getElementById('tripProgress');
+
+  function localDateStr(d) {
+    return d.getFullYear() + '-' +
+      String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
+  }
+  var today = localDateStr(new Date());
+  var idx = -1;
+  for (var i = 0; i < N; i++) { if (DAYS[i].dates.indexOf(today) !== -1) { idx = i; break; } }
+
+  function daysUntil(dateStr) {
+    return Math.round((new Date(dateStr + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
+  }
+
+  if (idx >= 0) {
+    var pct = Math.round(((idx + 1) / N) * 100);
+    if (prog) {
+      prog.hidden = false;
+      prog.innerHTML =
+        '<div class="trip-progress__bar"><span style="width:' + pct + '%"></span></div>' +
+        '<p class="trip-progress__text">Day ' + (idx + 1) + ' of ' + N + ' • ' + DAYS[idx].label +
+        ' — <a href="#' + DAYS[idx].id + '">jump to today ↓</a></p>';
+    }
+    var sec = document.getElementById(DAYS[idx].id);
+    if (sec) {
+      sec.classList.add('is-today');
+      var badgeEl = sec.querySelector('.day-header__badge');
+      if (badgeEl && !sec.querySelector('.today-badge')) {
+        var tb = document.createElement('span');
+        tb.className = 'today-badge';
+        tb.textContent = 'Today';
+        badgeEl.insertAdjacentElement('afterend', tb);
+      }
+      if (!location.hash) {
+        setTimeout(function () {
+          window.scrollTo({ top: sec.offsetTop - 76, behavior: 'smooth' });
+        }, 500);
+      }
+    }
+  } else if (prog) {
+    var startDelta = daysUntil(DAYS[0].dates[0]);
+    prog.hidden = false;
+    if (startDelta > 0) {
+      prog.innerHTML = '<p class="trip-progress__text">Trip starts ' + DAYS[0].label +
+        ' • ' + startDelta + ' day' + (startDelta > 1 ? 's' : '') + ' to go</p>';
+    } else {
+      prog.innerHTML = '<p class="trip-progress__text">Trip complete — hope it was amazing!</p>';
+    }
+  }
+})();
+
 /* THEME TOGGLE (dark mode) */
 (function () {
   var KEY = 'theme';

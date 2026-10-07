@@ -84,6 +84,7 @@
           <span class="stat__label">Travelers</span>
         </div>
       </div>
+      <div class="trip-progress" id="tripProgress" hidden></div>
       <a href="#overview" class="btn btn--primary">View Itinerary</a>
     </div>
   </section>
@@ -616,15 +617,28 @@
 
   <footer class="footer">
     <p>Pacific Northwest Family Road Trip &bull; Coast, Crater Lake &amp; Silver Falls</p>
-    <p class="footer__small">Build 2026-o3 &bull; Tesla road trip &bull; Map &bull; Installable &amp; works offline in no-signal stretches</p>
+    <p class="footer__small">Build 2026-o4 &bull; Live tracker &amp; weather &bull; Map &bull; Installable &amp; works offline in no-signal stretches</p>
   </footer>
+
+  <div id="tracker" class="tracker">
+    <button class="tracker__toggle">
+      <span class="tracker__dot"></span>
+      <span class="tracker__summary">Trip Tracker</span>
+      <span class="tracker__arrow">&#9662;</span>
+    </button>
+    <div class="tracker__body">
+      <div class="tracker__content"></div>
+    </div>
+  </div>
 
   <button id="installBtn" class="install-btn" hidden>&#11015;&#65039; Install app</button>
   <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="map.js?v=3"></script>
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
+  <script src="tracker.js?v=1"></script>
+  <script src="weather.js?v=1"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

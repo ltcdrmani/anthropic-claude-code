@@ -1,5 +1,5 @@
 /* PNW 3-Day (Coast / Crater Lake / Silver Falls) — offline service worker */
-var CACHE = 'pnw3day-v6';
+var CACHE = 'pnw3day-v7';
 
 var PRECACHE = [
   './',
@@ -7,6 +7,8 @@ var PRECACHE = [
   './styles.css',
   './script.js',
   './map.js',
+  './tracker.js',
+  './weather.js',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
