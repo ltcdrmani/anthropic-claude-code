@@ -1,11 +1,12 @@
 /* PNW 3-Day (Coast / Crater Lake / Silver Falls) — offline service worker */
-var CACHE = 'pnw3day-v3';
+var CACHE = 'pnw3day-v4';
 
 var PRECACHE = [
   './',
   './index.html',
   './styles.css',
   './script.js',
+  './map.js',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
@@ -37,6 +38,9 @@ self.addEventListener('fetch', function (e) {
   if (req.method !== 'GET') return;
   var url = new URL(req.url);
   if (url.hostname.indexOf('open-meteo.com') !== -1) return;
+  // Don't cache map tiles (too many; would bloat the cache) — network only.
+  if (url.hostname.indexOf('basemaps.cartocdn.com') !== -1 ||
+      url.hostname.indexOf('tile.openstreetmap.org') !== -1) return;
 
   if (req.mode === 'navigate') {
     e.respondWith(

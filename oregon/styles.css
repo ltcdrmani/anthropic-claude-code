@@ -454,6 +454,55 @@ ul, ol { padding-left: 1.25rem; }
 }
 .charge-chip:hover { background: #c3ecd2; }
 
+/* TRIP MAP */
+#tripmap {
+  height: 480px;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 24px rgba(13, 71, 86, 0.10);
+  z-index: 0;
+}
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  justify-content: center;
+  margin: 0 0 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.map-legend__item { display: inline-flex; align-items: center; gap: 0.4rem; }
+.map-dot {
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; line-height: 1;
+}
+.map-dot--base { background: #6b4fa3; }
+.map-dot--charge { background: #1f7d45; }
+.map-note { text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.9rem; }
+
+/* Leaflet marker pins */
+.mpin {
+  width: 26px; height: 26px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 800; font-size: 0.8rem;
+}
+.mpin > * { transform: rotate(45deg); }
+.mpin.mpin--base { background: #6b4fa3; border-radius: 50%; transform: none; font-size: 0.9rem; }
+.mpin.mpin--charge { background: #1f7d45; border-radius: 50%; transform: none; font-size: 0.9rem; width: 24px; height: 24px; }
+.mpin.mpin--start { background: #253238; border-radius: 50%; transform: none; }
+.mpin.mpin--end { background: #c0392b; border-radius: 50%; transform: none; }
+.mpin.mpin--base > *, .mpin.mpin--charge > *, .mpin.mpin--start > *, .mpin.mpin--end > * { transform: none; }
+.mpop { font-size: 0.86rem; line-height: 1.5; }
+.mpop__sub { color: #647076; font-size: 0.8rem; }
+.mpop a { color: var(--primary); font-weight: 600; }
+
 /* TIMELINE */
 .timeline {
   position: relative;
@@ -1276,6 +1325,12 @@ strong .map-link:hover { color: var(--accent); }
 :root[data-theme="dark"] .charge-bar b { color: #6fd79b; }
 :root[data-theme="dark"] .charge-chip { color: #8fe3b4; background: #16341f; border-color: #2a5c3c; }
 :root[data-theme="dark"] .charge-chip:hover { background: #1f4a2d; }
+:root[data-theme="dark"] #tripmap { border-color: #274056; box-shadow: 0 6px 24px rgba(0,0,0,0.45); }
+:root[data-theme="dark"] .leaflet-popup-content-wrapper,
+:root[data-theme="dark"] .leaflet-popup-tip { background: #16242f; color: var(--text); }
+:root[data-theme="dark"] .mpop__sub { color: #9bb0bb; }
+:root[data-theme="dark"] .leaflet-control-layers { background: #16242f; color: var(--text); border-color: #274056; }
+:root[data-theme="dark"] .leaflet-bar a { background: #16242f; color: var(--text); border-color: #274056; }
 :root[data-theme="dark"] .timeline__alt { background: #2a2418; color: #d3bd97; border-color: #40371f; }
 :root[data-theme="dark"] .meta-tag--drive { background: #13293b; color: #8fc2e6; border-color: #1e3c54; }
 :root[data-theme="dark"] .meta-tag--sight { background: #2f2611; color: #e2b968; border-color: #45391a; }
